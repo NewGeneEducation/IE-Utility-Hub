@@ -1,135 +1,1261 @@
-<!doctype html><html lang=en data-theme=executive><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Examination Seating & Attendance Arrangement</title><script src=https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js></script><style>:root[data-theme=executive]{--primary-color:#0f172a;--accent-color:#2563eb;--bg-color:#f8fafc;--card-bg:#ffffff;--bench-bg:#f1f5f9;--text-color:#0f172a;--border-color:#cbd5e1;--header-bg:#1e293b}:root[data-theme=slate]{--primary-color:#334155;--accent-color:#0284c7;--bg-color:#e2e8f0;--card-bg:#ffffff;--bench-bg:#f8fafc;--text-color:#1e1b4b;--border-color:#94a3b8;--header-bg:#475569}:root[data-theme=emerald]{--primary-color:#064e3b;--accent-color:#059669;--bg-color:#ecfdf5;--card-bg:#ffffff;--bench-bg:#f0fdf4;--text-color:#064e3b;--border-color:#a7f3d0;--header-bg:#047857}:root[data-theme=indigo]{--primary-color:#312e81;--accent-color:#4f46e5;--bg-color:#eef2ff;--card-bg:#ffffff;--bench-bg:#f5f3ff;--text-color:#1e1b4b;--border-color:#c7d2fe;--header-bg:#4338ca}:root{--youtube-red:#ff0000}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background-color:var(--bg-color);color:var(--text-color);margin:0;padding:10px;font-size:12px;transition:background-color .3s ease,color .3s ease}.container{width:min(1450px,100%);margin:0 auto;background:rgba(255,255,255,.95);padding:18px;border-radius:14px;box-shadow:0 10px 30px rgba(15,23,42,.08);box-sizing:border-box}.top-toolbar{display:flex;justify-content:flex-end;align-items:center;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--border-color)}.theme-select{width:auto!important;min-width:110px!important;height:25px;padding:2px 6px!important;font-size:.72rem!important;border-radius:6px;background:var(--bg-color);border:1px solid var(--border-color);color:var(--text-color);cursor:pointer}.header-bar{display:flex;justify-content:center;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}h1{color:var(--primary-color);margin:0;font-size:clamp(1.2rem,2.2vw,1.65rem);text-align:center;letter-spacing:-.5px}.yt-badge{display:inline-flex;align-items:center;gap:6px;background-color:#fff;color:red;border:1px solid red;padding:4px 10px;border-radius:20px;text-decoration:none;font-weight:700;font-size:.72rem;transition:all .2s ease}.yt-badge:hover{background-color:red;color:#fff}.yt-badge svg{width:15px;height:15px;fill:currentColor}.exam-info-panel{display:flex;gap:10px;justify-content:stretch;background:linear-gradient(135deg,var(--bench-bg),#fff);padding:12px;border-radius:10px;border:1px solid var(--border-color);margin-bottom:12px;flex-wrap:wrap}.info-field{flex:1 1 160px;display:flex;flex-direction:column;gap:3px;font-weight:600}.info-field label{font-size:.68rem;text-transform:uppercase;opacity:.8}input,select,textarea{padding:6px 8px;border:1px solid var(--border-color);border-radius:6px;font-size:.78rem;width:100%;box-sizing:border-box;font-family:inherit}input:focus,select:focus,textarea:focus{outline:0;border-color:var(--accent-color);box-shadow:0 0 0 2px rgba(37,99,235,.15)}.form-section{display:flex;flex-direction:column;gap:12px}.tables-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:14px;align-items:start}@media (max-width:950px){.tables-grid{grid-template-columns:1fr}}.table-card{display:flex;flex-direction:column;gap:8px;background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:12px}.table-card h2{font-size:.82rem;color:var(--text-color);border-bottom:1px solid var(--border-color);padding-bottom:5px;margin:0 0 6px 0;text-transform:uppercase;font-weight:700}.table-responsive{overflow-x:auto;border-radius:6px;border:1px solid var(--border-color);max-height:220px}.ultra-compact-table{font-size:.7rem;width:100%;border-collapse:collapse}.ultra-compact-table th{background-color:var(--bench-bg);color:var(--text-color);padding:5px 6px;text-align:left;border-bottom:1px solid var(--border-color);font-weight:700;font-size:.66rem;text-transform:uppercase}.ultra-compact-table td{padding:5px 6px;border-bottom:1px solid var(--bench-bg);vertical-align:middle}.ultra-compact-table input,.ultra-compact-table select{padding:3px 5px;font-size:.72rem;height:24px}.cols-config-container{display:flex;gap:3px;flex-wrap:wrap;align-items:center}.col-bench-unit{display:flex;align-items:center;gap:2px;background:var(--bench-bg);padding:2px 4px;border-radius:4px;border:1px solid var(--border-color);font-size:.65rem}.col-bench-unit input{width:30px;padding:1px;text-align:center;font-size:.7rem;height:20px}.btn-toolbar{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:4px}.btn-add{background-color:#059669;color:#fff;border:none;padding:5px 10px;border-radius:5px;font-weight:700;cursor:pointer;font-size:.72rem}.btn-sm-add{background-color:var(--accent-color);color:#fff;border:none;padding:2px 6px;border-radius:3px;font-size:.65rem;cursor:pointer;font-weight:700;height:22px}.btn-remove{background-color:#ef4444;color:#fff;border:none;border-radius:4px;padding:2px 6px;font-weight:700;cursor:pointer;font-size:.68rem}.btn-reset{background-color:#64748b;color:#fff;border:none;padding:5px 10px;border-radius:5px;font-weight:700;cursor:pointer;font-size:.72rem}.btn-upload{background-color:#4f46e5;color:#fff;border:none;padding:5px 10px;border-radius:5px;font-weight:700;cursor:pointer;font-size:.72rem;display:inline-flex;align-items:center;gap:4px}.btn-generate{padding:12px;background:linear-gradient(135deg,var(--primary-color),var(--accent-color));color:#fff;border:none;border-radius:8px;font-size:.9rem;font-weight:800;cursor:pointer;width:100%}.btn-print,.btn-print-att{background-color:#059669;color:#fff;border:none;padding:6px 12px;border-radius:5px;font-size:.78rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:5px}.btn-print-att{background-color:var(--accent-color)}.status-badge{font-size:.72rem;color:#059669;font-weight:700;margin-left:auto;opacity:0;transition:opacity .3s ease}.info-bar{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;font-size:.75rem}.info-card{background:var(--bench-bg);padding:6px 12px;border-radius:20px;border:1px solid var(--border-color);font-weight:700;color:var(--text-color)}.print-hint-banner{background:#eff6ff;border:1px solid #bfdbfe;border-left:4px solid var(--accent-color);padding:8px 12px;border-radius:6px;font-size:.75rem;color:#1e3a8a;margin-bottom:10px;display:flex;align-items:center;gap:8px}.summary-table-container{border:1px solid var(--border-color);border-radius:8px;overflow-x:auto;background:#fff;margin-bottom:15px}.summary-table{width:100%;border-collapse:collapse;font-size:.8rem;text-align:center}.summary-table th{background-color:var(--header-bg);color:#fff;padding:6px 4px;font-weight:700;border:1px solid var(--border-color)}.summary-table td{padding:5px 4px;border:1px solid var(--border-color);font-weight:600}.summary-title{font-size:.9rem;font-weight:800;color:var(--primary-color);text-align:center;margin:8px 0;text-transform:uppercase}.seating-strength-notice{background:#fff;border:2px solid #000;border-radius:6px;padding:10px;margin-bottom:20px;page-break-after:always;page-break-inside:avoid;color:#000;width:100%}.notice-board-header{text-align:center;margin-bottom:8px;border-bottom:2px solid #000;padding-bottom:6px}.notice-board-title{font-size:1rem;font-weight:900;color:#000;text-transform:uppercase;margin:0 0 2px 0}.notice-board-sub{font-size:.78rem;font-weight:800;color:#000}.exact-notice-table{width:100%;border-collapse:collapse;font-size:.88rem;text-align:center}.exact-notice-table td,.exact-notice-table th{border:2px solid #000;padding:6px;vertical-align:middle}.room-block{background:#fff;border:1px solid var(--border-color);border-radius:10px;padding:14px;margin-bottom:20px;page-break-after:always;box-sizing:border-box;width:100%}.room-title{text-align:center;color:var(--primary-color);font-size:1.25rem;font-weight:800;margin:0 0 4px 0}.room-sub-header{text-align:center;font-size:.8rem;font-weight:600;margin-bottom:6px;color:#475569}.blackboard{background:var(--header-bg);color:#f8fafc;text-align:center;padding:6px;margin:0 auto 12px auto;border-radius:4px;font-weight:700;letter-spacing:2px;width:45%;font-size:.78rem;text-transform:uppercase}.classroom-grid{display:flex;gap:12px;justify-content:space-evenly;align-items:flex-start;overflow-x:auto;padding:6px 2px;width:100%}.column{display:flex;flex-direction:column;gap:8px;align-items:center;flex:1 1 0px;min-width:180px}.column-header{font-weight:700;color:var(--primary-color);background-color:var(--bench-bg);padding:6px 12px;border-radius:14px;font-size:.75rem;border:1px solid var(--border-color);text-align:center;width:90%}.bench{background-color:var(--bench-bg);border:1px solid var(--border-color);border-radius:8px;padding:6px;display:flex;flex-direction:column;align-items:center;width:100%}.bench-number{font-size:.7rem;font-weight:700;color:#64748b;margin-bottom:4px}.seats-container{display:flex;gap:8px;width:100%;justify-content:space-between}.seat{color:#000;background:#fff;border:1px solid var(--border-color);padding:6px 4px;border-radius:6px;width:50%;text-align:center;min-height:50px;display:flex;flex-direction:column;align-items:center;justify-content:center}.seat-ht{font-size:.95rem;font-weight:800;color:var(--primary-color)}.seat-meta{font-size:.65rem;font-weight:700;color:#475569;margin-top:2px}.seat.empty{background-color:#e2e8f0;color:#64748b}.attendance-sheet{background:#fff;border:2px solid #000;padding:8px;margin-bottom:15px;page-break-after:always;page-break-inside:avoid;color:#000;display:flex;flex-direction:column;justify-content:space-between;height:98vh}.att-table-header{width:100%;border-collapse:collapse;font-size:.78rem;margin-bottom:-1px}.att-table-header td{border:1px solid #000;padding:4px 6px;font-weight:700}.att-main-title{text-align:center;font-size:.95rem;font-weight:800;text-transform:uppercase}.att-center-title{text-align:center;font-size:.85rem;font-weight:700;text-transform:uppercase}.att-table-wrapper{flex-grow:1;display:flex;flex-direction:column}.att-table-body{width:100%;height:100%;border-collapse:collapse}.att-table-body td,.att-table-body th{border:1px solid #000;padding:2px 4px;text-align:center}.att-table-body th{font-size:.75rem;font-weight:700;background-color:#f8fafc;height:24px}.att-table-body td{font-size:.8rem;vertical-align:middle}.att-table-body td.ht-cell{font-weight:800;font-size:1.1rem;letter-spacing:1px}.footer-credit{text-align:center;margin-top:14px;font-size:.7rem;color:#64748b;font-weight:600}@media print{@page{size:A4 portrait;margin:4mm}body{background-color:#fff;padding:0}.btn-print,.btn-print-att,.footer-credit,.form-section,.no-print,.print-actions,.status-badge,.top-toolbar,button{display:none!important}.container{box-shadow:none;width:100%;max-width:100%;padding:0}.seating-strength-notice{border:2px solid #000!important;page-break-after:always!important;page-break-inside:avoid!important;padding:4px!important;height:98vh!important;display:flex!important;flex-direction:column!important;justify-content:space-between!important}.room-block{border:1px solid #000;page-break-after:always;padding:10px}.attendance-sheet{border:2px solid #000!important;page-break-after:always!important;page-break-inside:avoid!important;margin:0!important;padding:6px!important;height:98vh!important}}</style></head><body><div class=container><div class=top-toolbar><div style=display:flex;align-items:center;gap:6px><label for=themeSelect style=font-size:.72rem;font-weight:700>🎨 Theme:</label><select id=themeSelect class=theme-select onchange=changeTheme(this.value)><option value=executive>Executive Dark</option><option value=slate>Modern Slate</option><option value=emerald>Emerald Green</option><option value=indigo>Royal Indigo</option></select></div></div><div class=header-bar><h1>Examination Seating & Attendance Generator</h1><a href=https://www.youtube.com/@Gudurusathishkumar target=_blank class=yt-badge rel=noopener><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>NewGen eEducation</a></div><div class=exam-info-panel><div class=info-field><label for=examInputText>Exam Type:</label><input id=examInputText placeholder="IPE Feb-Mar 2026" oninput=saveToLocalStorage()></div><div class=info-field><label for=centreNameInput>College / Centre Name:</label><input id=centreNameInput placeholder="GOVT. JUNIOR COLLEGE,____" oninput=saveToLocalStorage()></div><div class=info-field><label for=districtInput>District Name:</label><input id=districtInput placeholder="BHADRADRI KOTHAGUDEM Dist" oninput=saveToLocalStorage()></div><div class=info-field><label for=centreNoInput>Centre Code (C.NO):</label><input id=centreNoInput placeholder=44015 style=width:90px oninput=saveToLocalStorage()></div><div class=info-field><label for=courseTypeSelect>Stream / Course:</label><select id=courseTypeSelect onchange=toggleCustomCourseInput(this.value),saveToLocalStorage()><option value="General & Vocational">General & Vocational</option><option value=CUSTOM>Custom Stream...</option></select><input id=customCourseInput placeholder="Enter Stream" style=display:none;width:110px oninput=saveToLocalStorage()></div><div class=info-field><label for=examDate>Date:</label><input type=date id=examDate></div><div class=info-field><label for=examSession>Session:</label><select id=examSession><option value=FN>FN (Morning)</option><option value=AN>AN (Afternoon)</option></select></div></div><div class=form-section><div class=print-hint-banner><div>ℹ️ <strong>Room Strength Setup:</strong> Enter the <strong>Max Strength</strong> for any room to cap candidate count (e.g. 24, 28). If left blank, it automatically defaults to the full bench capacity (Benches × 2).</div></div><div class=tables-grid><div class=table-card><div style=display:flex;align-items:center;justify-content:space-between><h2>1. Room Layout Configuration</h2><span id=saveStatus class=status-badge>✓ Saved</span></div><div class=table-responsive><table class="input-table ultra-compact-table"><thead><tr><th style=width:25%>Room Name</th><th style=width:18%>Stream</th><th style=width:16% title="Max students allowed in this room">Strength</th><th style=width:33%>Columns (Benches)</th><th style=width:8%;text-align:center>Del</th></tr></thead><tbody id=roomTableBody></tbody></table></div><div class=btn-toolbar><button class=btn-add onclick=addRoomTableRow()>+ Add Room</button></div></div><div class=table-card><h2>2. Student Data Entry</h2><div style=font-size:.72rem;color:#64748b;margin-bottom:4px>Format: <strong>Sl.No &nbsp; Hallticket &nbsp; PaperCode &nbsp; Medium</strong></div><div id=singleStudentBoxContainer style=display:none><div style=display:flex;justify-content:space-between;align-items:center;margin-bottom:4px><label style=font-weight:700;font-size:.75rem>Student List:</label><label class=btn-upload>📁 Upload PDF <input type=file id=singlePdfUpload accept=.pdf style=display:none onchange='handlePdfUpload(event,"single")'></label></div><textarea id=studentRawData style=min-height:70px;height:70px placeholder="1  2544109893  137  E&#10;41  2544109933  61  A"></textarea></div><div id=dualStudentBoxContainer style=display:flex;flex-direction:column;gap:8px><div><div style=display:flex;justify-content:space-between;align-items:center;margin-bottom:3px><label style=font-weight:700;font-size:.75rem;color:var(--primary-color)>General Students List:</label><label class=btn-upload>📁 Upload General PDF <input type=file id=generalPdfUpload accept=.pdf style=display:none onchange='handlePdfUpload(event,"general")'></label></div><textarea id=studentGeneralRawData style=min-height:60px;height:60px placeholder="1  2544109893  137  E"></textarea></div><div><div style=display:flex;justify-content:space-between;align-items:center;margin-bottom:3px><label style=font-weight:700;font-size:.75rem;color:var(--accent-color)>Vocational Students List:</label><label class=btn-upload>📁 Upload Vocational PDF <input type=file id=vocationalPdfUpload accept=.pdf style=display:none onchange='handlePdfUpload(event,"vocational")'></label></div><textarea id=studentVocationalRawData style=min-height:60px;height:60px placeholder="1  2644990101  124  24"></textarea></div></div><div class=btn-toolbar><button class=btn-reset onclick=resetToDefaults()>Reset Sample Data</button></div></div></div><button class=btn-generate onclick=generateSeatingAndAttendance()>Generate Seating Plan, Paper Summary & Attendance Sheets</button></div><div id=layoutArea style=display:none;margin-top:16px><div style=display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px><span style=font-weight:800;font-size:.95rem;color:var(--text-color)>Generated Seating & Attendance Plan</span><div class=print-actions style=display:flex;gap:6px;flex-wrap:wrap><button class=btn-print onclick=printSeatingPlan()>🪑 Print Seating Plan</button><button class=btn-print-att onclick=printAllAttendanceSheets()>📋 Print Attendance Sheets</button><button class=btn-print onclick=printPaperSummary()>📊 Print Paper Summary</button><button class=btn-print onclick='printNoticeBoard("GEN")'>📌 General Notice Board</button><button class=btn-print onclick='printNoticeBoard("VOC")'>📌 Vocational Notice Board</button></div></div><div id=infoBar class=info-bar></div><div id=paperSummaryOutput></div><div id=roomsOutputContainer></div><div id=attendanceSheetsContainer></div></div><div class=footer-credit>Designed & Developed by Guduru Sathish Kumar | NewGen eEducation</div></div><script>document.addEventListener("contextmenu",(t=>t.preventDefault())),document.addEventListener("keydown",(function(t){return"F12"===t.key||123===t.keyCode?(t.preventDefault(),!1):(!t.ctrlKey&&!t.metaKey||"u"!==t.key&&"U"!==t.key&&85!==t.keyCode)&&(!t.ctrlKey&&!t.metaKey||!t.shiftKey||"i"!==t.key&&"I"!==t.key&&73!==t.keyCode)&&(!t.ctrlKey&&!t.metaKey||!t.shiftKey||"j"!==t.key&&"J"!==t.key&&74!==t.keyCode)&&(!t.ctrlKey&&!t.metaKey||!t.shiftKey||"c"!==t.key&&"C"!==t.key&&67!==t.keyCode)&&(!t.ctrlKey&&!t.metaKey||"s"!==t.key&&"S"!==t.key&&83!==t.keyCode)?void 0:(t.preventDefault(),!1)})),setInterval((function(){const t=Date.now();(function(){}).constructor("debugger")(),Date.now()-t>100&&(document.body.innerHTML='<h2 style="color:red;text-align:center;margin-top:20%;">Developer Tools are restricted. Please close the console and reload.</h2>')}),1e3),pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";function changeTheme(t){document.documentElement.setAttribute("data-theme",t),localStorage.setItem("examEngine_ipe_theme",t)}function loadSavedTheme(){const t=localStorage.getItem("examEngine_ipe_theme")||"executive";document.documentElement.setAttribute("data-theme",t),document.getElementById("themeSelect").value=t}function toggleCustomCourseInput(t){const e=document.getElementById("customCourseInput"),n=document.getElementById("singleStudentBoxContainer"),o=document.getElementById("dualStudentBoxContainer");"CUSTOM"===t?(e.style.display="inline-block",n.style.display="block",o.style.display="none"):(e.style.display="none",n.style.display="none",o.style.display="flex")}function getSelectedCourseType(){const t=document.getElementById("courseTypeSelect").value;return"CUSTOM"===t?document.getElementById("customCourseInput").value.trim()||"Custom Stream":t}function loadDefaultData(){document.getElementById("roomTableBody").innerHTML="",addRoomTableRow("ROOM NO 1","General",[7,7,7],!1,""),addRoomTableRow("ROOM NO 2","Vocational",[7,7,7],!1,""),document.getElementById("examInputText").value="IPE MARCH 2026",document.getElementById("centreNameInput").value="GOVT. JUNIOR COLLEGE, ______",document.getElementById("districtInput").value="BHADRADRI KOTHAGUDEM DIST.",document.getElementById("centreNoInput").value="44***",document.getElementById("courseTypeSelect").value="General & Vocational",toggleCustomCourseInput("General & Vocational"),document.getElementById("studentRawData").value="",document.getElementById("studentGeneralRawData").value="",document.getElementById("studentVocationalRawData").value="",saveToLocalStorage()}async function handlePdfUpload(t,e){const n=t.target.files[0];if(n)try{const o=await n.arrayBuffer(),a=pdfjsLib.getDocument({data:o}),r=await a.promise;let i="",l=[];for(let t=1;t<=r.numPages;t++){const e=await r.getPage(t),n=await e.getTextContent();let o=[],a=[];n.items.forEach((t=>{let e=t.transform[4],n=5*Math.round(t.transform[5]/5);e<280?o.push({x:e,y:n,str:t.str}):a.push({x:e,y:n,str:t.str})}));let d=n.items.map((t=>t.str)).join(" ");1===t&&(i+=d),parseColumnItems(o,l),parseColumnItems(a,l)}parseExamHeaderDetails(i),l.sort(((t,e)=>parseInt(t.slNo)-parseInt(e.slNo)));let d=l.map((t=>`${t.slNo}  ${t.ht}  ${t.pc}  ${t.med}`)).join("\n");"single"===e?document.getElementById("studentRawData").value=d:"general"===e?document.getElementById("studentGeneralRawData").value=d:"vocational"===e&&(document.getElementById("studentVocationalRawData").value=d),saveToLocalStorage(),alert("PDF successfully parsed!")}catch(t){console.error("Error parsing PDF:",t),alert("Failed to extract text from PDF.")}finally{t.target.value=""}}function parseColumnItems(t,e){let n={};t.forEach((t=>{n[t.y]||(n[t.y]=[]),n[t.y].push(t)})),Object.keys(n).sort(((t,e)=>Number(e)-Number(t))).forEach((t=>{let o=n[t].sort(((t,e)=>t.x-e.x)).map((t=>t.str)).join(" ").trim().split(/\s+/);if(o.length>=4&&/^\d+$/.test(o[0])&&/^\d{10}$/.test(o[1]))e.push({slNo:o[0],ht:o[1],pc:o[2],med:o.slice(3).join(" ").toUpperCase()});else{let t=o.findIndex((t=>/^\d{10}$/.test(t)));if(-1!==t){let n=t>0&&/^\d+$/.test(o[t-1])?o[t-1]:(e.length+1).toString(),a=o[t],r=o[t+1]||"02",i=o.slice(t+2).join(" ")||"E";e.push({slNo:n,ht:a,pc:r,med:i.toUpperCase()})}}}))}function parseExamHeaderDetails(t){if(!t)return;const e=t.match(/(?:C\.?NO\.?|CENTRE\s*(?:CODE)?[:\s\-]*)\s*(\d{4,6})/i);e&&e[1]&&(document.getElementById("centreNoInput").value=e[1]);const n=t.match(/([A-Z0-9\.\,\s]{3,}(?:COLLEGE|INSTITUTE|SCHOOL|H\.?S\.?)[A-Z0-9\.\,\s]*)/i);if(n&&n[1]){let t=n[1].trim().replace(/\s+/g," ");t.length>5&&(document.getElementById("centreNameInput").value=t)}const o=["ADILABAD","BHADRADRI KOTHAGUDEM","HYDERABAD","JAGTIAL","JANGOAN","JAYASHANKAR BHUPALPALLY","JOGULAMBA GADWAL","KAMAREDDY","KARIMNAGAR","KHAMMAM","KOMARAM BHEEM ASIAFABAD","MAHABUBABAD","MAHABUBNAGAR","MANCHERIAL","MEDAK","MEDCHAL-MALKAJGIRI","MULUGU","NAGARKURNOOL","NALGONDA","NARAYANPET","NIRMAL","NIZAMABAD","PEDDAPALLI","RAJANNA SIRCILLA","RANGAREDDY","SANGAREDDY","SIDDIPET","SURVAPET","VIKARABAD","WANAPARTHY","WARANGAL","YADADRI BHUVANAGIRI"];for(let e of o)if(t.toUpperCase().includes(e)){document.getElementById("districtInput").value=e;break}const a=t.match(/\b(0?[1-9]|[12]\d|3[01])[\/\-](0?[1-9]|1[0-2])[\/\-](\d{2,4})\b/);if(a){let t=a[1].padStart(2,"0"),e=a[2].padStart(2,"0"),n=a[3];2===n.length&&(n="20"+n),document.getElementById("examDate").value=`${n}-${e}-${t}`}const r=t.toUpperCase();r.includes("AFTERNOON")||r.includes("AN SESSION")||r.includes(" AN ")?document.getElementById("examSession").value="AN":(r.includes("MORNING")||r.includes("FN SESSION")||r.includes(" FN "))&&(document.getElementById("examSession").value="FN")}function saveToLocalStorage(){const t=[];document.querySelectorAll("#roomTableBody tr").forEach((e=>{const n=e.querySelector(".rm-name").value,o=e.querySelector(".rm-type").value,a=e.querySelector(".rm-strength").value,r=[];e.querySelectorAll(".col-benches").forEach((t=>{r.push(parseInt(t.value)||0)})),t.push({name:n,type:o,strength:a,cols:r})}));const e=document.getElementById("studentRawData").value,n=document.getElementById("studentGeneralRawData").value,o=document.getElementById("studentVocationalRawData").value,a=document.getElementById("examInputText").value,r=document.getElementById("centreNameInput").value,i=document.getElementById("districtInput").value,l=document.getElementById("centreNoInput").value,d=document.getElementById("courseTypeSelect").value,s=document.getElementById("customCourseInput").value;localStorage.setItem("examEngine_ipe_rooms",JSON.stringify(t)),localStorage.setItem("examEngine_ipe_students_raw",e),localStorage.setItem("examEngine_ipe_gen_raw",n),localStorage.setItem("examEngine_ipe_voc_raw",o),localStorage.setItem("examEngine_ipe_exam_title",a),localStorage.setItem("examEngine_ipe_centre_name",r),localStorage.setItem("examEngine_ipe_district",i),localStorage.setItem("examEngine_ipe_centre_no",l),localStorage.setItem("examEngine_ipe_course_type",d),localStorage.setItem("examEngine_ipe_custom_course",s),showSaveStatus()}function loadFromLocalStorage(){const t=localStorage.getItem("examEngine_ipe_rooms"),e=localStorage.getItem("examEngine_ipe_students_raw"),n=localStorage.getItem("examEngine_ipe_gen_raw"),o=localStorage.getItem("examEngine_ipe_voc_raw"),a=localStorage.getItem("examEngine_ipe_exam_title"),r=localStorage.getItem("examEngine_ipe_centre_name"),i=localStorage.getItem("examEngine_ipe_district"),l=localStorage.getItem("examEngine_ipe_centre_no"),d=localStorage.getItem("examEngine_ipe_course_type"),s=localStorage.getItem("examEngine_ipe_custom_course");if(!t)return!1;const c=JSON.parse(t);return document.getElementById("roomTableBody").innerHTML="",c.forEach((t=>addRoomTableRow(t.name,t.type||"Any",t.cols,!1,t.strength||""))),e&&(document.getElementById("studentRawData").value=e),n&&(document.getElementById("studentGeneralRawData").value=n),o&&(document.getElementById("studentVocationalRawData").value=o),null!==a&&(document.getElementById("examInputText").value=a),null!==r&&(document.getElementById("centreNameInput").value=r),null!==i&&(document.getElementById("districtInput").value=i),null!==l&&(document.getElementById("centreNoInput").value=l),null!==d&&(document.getElementById("courseTypeSelect").value="General"===d||"Vocational"===d?"General & Vocational":d,toggleCustomCourseInput(document.getElementById("courseTypeSelect").value)),null!==s&&(document.getElementById("customCourseInput").value=s),!0}function showSaveStatus(){const t=document.getElementById("saveStatus");t&&(t.style.opacity="1",setTimeout((()=>{t.style.opacity="0"}),1200))}function resetToDefaults(){confirm("Reset room configurations and student list to sample data?")&&loadDefaultData()}function addRoomTableRow(t="",e="Any",n=[7,7],o=!0,a=""){const r=document.getElementById("roomTableBody"),i=r.rows.length+1,l=document.createElement("tr"),d=t||`ROOM NO ${i}`;l.innerHTML=`
-            <td>
-                <input type="text" class="rm-name" value="${d}" placeholder="e.g. ROOM NO 1" oninput="saveToLocalStorage()">
-            </td>
-            <td>
-                <select class="rm-type" onchange="saveToLocalStorage()">
-                    <option value="Any" ${"Any"===e?"selected":""}>Any / Mixed</option>
-                    <option value="General" ${"General"===e?"selected":""}>General</option>
-                    <option value="Vocational" ${"Vocational"===e?"selected":""}>Vocational</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" class="rm-strength" value="${a}" placeholder="Auto (Cap)" min="1" title="Max strength allowed in this room (optional)" oninput="saveToLocalStorage()">
-            </td>
-            <td>
-                <div class="cols-config-container">
-                    <div class="cols-list" style="display: flex; gap: 3px; flex-wrap: wrap;"></div>
-                    <button class="btn-sm-add" onclick="addColumnToRoom(this)">+ Col</button>
-                </div>
-            </td>
-            <td style="text-align: center;">
-                <button class="btn-remove" onclick="removeRowAndSave(this)">✕</button>
-            </td>
-        `,r.appendChild(l);const s=l.querySelector(".cols-list");n.forEach(((t,e)=>{createColumnBadge(s,e+1,t)})),o&&saveToLocalStorage()}function createColumnBadge(t,e,n){const o=document.createElement("div");o.className="col-bench-unit",o.innerHTML=`
-            <span>C<span class="col-idx">${e}</span>:</span>
-            <input type="number" class="col-benches" value="${n}" min="1" oninput="saveToLocalStorage()">
-            <span style="cursor: pointer; color: #ef4444; font-weight: bold; margin-left: 2px;" onclick="removeColumnFromRoom(this)">✕</span>
-        `,t.appendChild(o)}function addColumnToRoom(t){const e=t.previousElementSibling;createColumnBadge(e,e.children.length+1,7),saveToLocalStorage()}function removeColumnFromRoom(t){const e=t.closest(".cols-list");t.closest(".col-bench-unit").remove(),Array.from(e.children).forEach(((t,e)=>{t.querySelector(".col-idx").innerText=e+1})),saveToLocalStorage()}function removeRowAndSave(t){t.closest("tr").remove(),saveToLocalStorage()}function parseStudentData(t,e=""){const n=t.split("\n"),o=[];return n.forEach((t=>{const n=t.trim().split(/\s+/);if(n.length>=4&&/^\d+$/.test(n[0])&&/^\d{10}$/.test(n[1]))o.push({slNo:n[0],ht:n[1],sc:n[2],pc:n[2],med:n.slice(3).join(" ").toUpperCase(),stream:e});else if(n.length>=3){let t=n.findIndex((t=>/^\d{10}$/.test(t)));if(-1!==t){let a=t>0&&/^\d+$/.test(n[t-1])?n[t-1]:(o.length+1).toString(),r=n[t],i=n[t+1]||"02",l=n.slice(t+2).join(" ")||"E";o.push({slNo:a,ht:r,sc:i,pc:i,med:l.toUpperCase(),stream:e})}}})),o.sort(((t,e)=>parseInt(t.slNo)-parseInt(e.slNo))),o}function formatDateFormatted(t){if(!t)return"";const e=new Date(t);return`${String(e.getDate()).padStart(2,"0")}/${String(e.getMonth()+1).padStart(2,"0")}/${e.getFullYear()}`}function generateSeatingAndAttendance(){saveToLocalStorage();const t=document.querySelectorAll("#roomTableBody tr"),e=[];let n=0;if(t.forEach(((t,o)=>{const a=t.querySelector(".rm-name").value.trim()||`ROOM NO ${o+1}`,r=t.querySelector(".rm-type").value,i=parseInt(t.querySelector(".rm-strength").value)||0,l=t.querySelectorAll(".col-benches"),d=[];if(l.forEach((t=>{const e=parseInt(t.value)||0;e>0&&d.push(e)})),d.length>0){const t=d.reduce(((t,e)=>t+e),0),o=2*t,l=i>0?Math.min(i,o):o;e.push({name:a,type:r,columns:d,totalBenches:t,physicalCapacity:o,maxStrength:l}),n+=l}})),0===e.length)return void alert("Please add at least one valid room with columns.");const o=document.getElementById("courseTypeSelect").value,a=getSelectedCourseType();let r=[],i=[],l=[];"General & Vocational"===o?(r=parseStudentData(document.getElementById("studentGeneralRawData").value,"General"),i=parseStudentData(document.getElementById("studentVocationalRawData").value,"Vocational")):l=parseStudentData(document.getElementById("studentRawData").value,a);const d=r.length+i.length+l.length;if(0===d)return void alert("Please paste or upload valid student data.");const s=document.getElementById("examInputText").value.trim()||"INTERMEDIATE PUBLIC EXAMINATION",c=document.getElementById("centreNameInput").value.trim()||"GOVT. JUNIOR COLLEGE,____",m=document.getElementById("districtInput").value.trim(),p=document.getElementById("centreNoInput").value.trim()||"44015",u=a,g=formatDateFormatted(document.getElementById("examDate").value),h=document.getElementById("examSession").value,f=c+(m?`, ${m}`:"");document.getElementById("infoBar").innerHTML=`
-            <div class="info-card">Exam: ${s}</div>
-            <div class="info-card">Centre: ${f} (C.NO: ${p})</div>
-            <div class="info-card">Date: ${g} ${h}</div>
-            <div class="info-card">Total Students: ${d}</div>
-            <div class="info-card">Total Allowed Strength: ${n} Seats</div>
-        `;const y=document.getElementById("roomsOutputContainer"),v=document.getElementById("attendanceSheetsContainer");y.innerHTML="",v.innerHTML="";const w=[],x=[],E=[],S=[],A=new Set,I=new Set,N=new Set,T=new Set,$=new Set;let C=1;e.forEach((t=>{const e=document.createElement("div");e.className="room-block";const n="General"===t.type?"GEN":"Vocational"===t.type?"VOC":"MIX",a=`ROOM ${C} (${n})`;C++;const d="Any"!==t.type?` - ${t.type}`:"";e.innerHTML=`
-                <div class="room-title">${t.name}${d} <span style="font-size:0.85rem;color:#64748b;">(Cap: ${t.maxStrength})</span></div>
-                <div class="room-sub-header">${s} | ${f} (C.NO: ${p})</div>
-                <div class="room-sub-header">Stream: ${u} | Date: ${g} | Session: ${h}</div>
-                <div class="blackboard">BLACKBOARD / FRONT</div>
-            `;const m=document.createElement("div");m.className="classroom-grid";let y=[],v=[];t.columns.forEach(((t,e)=>{const n=e+1,o=document.createElement("div");o.className="column";const a=document.createElement("div");a.className="column-header",a.innerText=`Col ${n} (L⬇️ R⬆️)`,o.appendChild(a);let r=[],i=[];for(let e=1;e<=t;e++){const t=document.createElement("div");t.className="bench";const a=document.createElement("div");a.className="bench-number",a.innerText=`C${n}-B${e}`,t.appendChild(a);const l=document.createElement("div");l.className="seats-container";const d=document.createElement("div");d.className="seat";const s=document.createElement("div");s.className="seat",l.appendChild(d),l.appendChild(s),t.appendChild(l),o.appendChild(t),r.push(d),i.push(s)}i.reverse(),y.push(o),v.push([...r,...i])}));const B={},k={},D={},M=[];let O=0;v.forEach((e=>{e.forEach((e=>{let n=null;if(O<t.maxStrength){if("General & Vocational"===o?"General"===t.type&&r.length>0?n=r.shift():"Vocational"===t.type&&i.length>0?n=i.shift():"Any"===t.type&&(r.length>0?n=r.shift():i.length>0&&(n=i.shift())):l.length>0&&(n=l.shift()),n)O++}if(n){M.push(n);const t=`(${n.pc} ${n.med})`;if(e.innerHTML=`
-                            <span class="seat-ht">${n.ht}</span>
-                            <span class="seat-meta">${t}</span>
-                        `,"General"===n.stream){const t=`${n.sc}_${n.pc}_${n.med}`;B[t]=(B[t]||0)+1,A.add(n.med),I.add(JSON.stringify({sc:n.sc,pc:n.pc}))}else if("Vocational"===n.stream){const t=n.med;k[t]=(k[t]||0)+1,N.add(n.med)}else{const t=`${n.sc}_${n.pc}_${n.med}`;D[t]=(D[t]||0)+1,T.add(n.med),$.add(JSON.stringify({sc:n.sc,pc:n.pc}))}}else e.innerHTML='<span class="seat-ht" style="color:#94a3b8; font-size: 0.85rem;">EMPTY</span><span class="seat-meta">-</span>',e.classList.add("empty")}))})),y.forEach((t=>m.appendChild(t))),e.appendChild(m),document.getElementById("roomsOutputContainer").appendChild(e),generateAttendanceSheet(t.name,M,s,f,p,g,h);const R=t.name+("Any"!==t.type?` (${t.type})`:""),P=M.map((t=>t.ht));S.push({stream:n,roomLabel:a,halltickets:P,strength:M.length}),"General & Vocational"===o?("General"!==t.type&&"Any"!==t.type||w.push({roomName:R,counts:B}),"Vocational"!==t.type&&"Any"!==t.type||x.push({roomName:R,counts:k})):E.push({roomName:R,counts:D})}));const B=document.getElementById("paperSummaryOutput");B.innerHTML="";const k=t=>Array.from(t).map((t=>JSON.parse(t))).sort(((t,e)=>t.sc.localeCompare(e.sc)||t.pc.localeCompare(e.pc)));let D="";"General & Vocational"===o?(w.length>0&&(D+=buildGeneralSummaryHTML("General Course",w,k(I),Array.from(A).sort())),x.length>0&&(D+=buildVocationalSummaryHTML("Vocational Course",x,Array.from(N).sort()))):D+=buildGeneralSummaryHTML(u+" Course",E,k($),Array.from(T).sort());let M="";const O=S.filter((t=>"GEN"===t.stream)),R=S.filter((t=>"VOC"===t.stream)),P=S.filter((t=>"GEN"!==t.stream&&"VOC"!==t.stream));O.length&&(M+=buildSeatingStrengthNoticeBoardHTML(O,s+" - GENERAL",f,p,g,h)),R.length&&(M+=buildSeatingStrengthNoticeBoardHTML(R,s+" - VOCATIONAL",f,p,g,h)),O.length||R.length||!P.length||(M=buildSeatingStrengthNoticeBoardHTML(P,s,f,p,g,h)),B.innerHTML=`
-            <div style="display: flex; flex-direction: column; gap: 20px; width: 100%;">
-                ${D}
-                ${M}
+<!doctype html>
+<html lang="en" data-theme="executive">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Examination Seating & Attendance Arrangement</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<style>
+:root[data-theme=executive]{--primary-color:#0f172a;--accent-color:#2563eb;--bg-color:#f8fafc;--card-bg:#ffffff;--bench-bg:#f1f5f9;--text-color:#0f172a;--border-color:#cbd5e1;--header-bg:#1e293b}
+:root[data-theme=slate]{--primary-color:#334155;--accent-color:#0284c7;--bg-color:#e2e8f0;--card-bg:#ffffff;--bench-bg:#f8fafc;--text-color:#1e1b4b;--border-color:#94a3b8;--header-bg:#475569}
+:root[data-theme=emerald]{--primary-color:#064e3b;--accent-color:#059669;--bg-color:#ecfdf5;--card-bg:#ffffff;--bench-bg:#f0fdf4;--text-color:#064e3b;--border-color:#a7f3d0;--header-bg:#047857}
+:root[data-theme=indigo]{--primary-color:#312e81;--accent-color:#4f46e5;--bg-color:#eef2ff;--card-bg:#ffffff;--bench-bg:#f5f3ff;--text-color:#1e1b4b;--border-color:#c7d2fe;--header-bg:#4338ca}
+:root{--youtube-red:#ff0000}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background-color:var(--bg-color);color:var(--text-color);margin:0;padding:10px;font-size:12px;transition:background-color .3s ease,color .3s ease}
+.container{width:min(1450px,100%);margin:0 auto;background:rgba(255,255,255,.95);padding:18px;border-radius:14px;box-shadow:0 10px 30px rgba(15,23,42,.08);box-sizing:border-box}
+.top-toolbar{display:flex;justify-content:flex-end;align-items:center;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--border-color)}
+.theme-select{width:auto!important;min-width:110px!important;height:25px;padding:2px 6px!important;font-size:.72rem!important;border-radius:6px;background:var(--bg-color);border:1px solid var(--border-color);color:var(--text-color);cursor:pointer}
+.header-bar{display:flex;justify-content:center;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+h1{color:var(--primary-color);margin:0;font-size:clamp(1.2rem,2.2vw,1.65rem);text-align:center;letter-spacing:-.5px}
+.yt-badge{display:inline-flex;align-items:center;gap:6px;background-color:#fff;color:red;border:1px solid red;padding:4px 10px;border-radius:20px;text-decoration:none;font-weight:700;font-size:.72rem;transition:all .2s ease}
+.yt-badge:hover{background-color:red;color:#fff}
+.yt-badge svg{width:15px;height:15px;fill:currentColor}
+.exam-info-panel{display:flex;gap:10px;justify-content:stretch;background:linear-gradient(135deg,var(--bench-bg),#fff);padding:12px;border-radius:10px;border:1px solid var(--border-color);margin-bottom:12px;flex-wrap:wrap}
+.info-field{flex:1 1 160px;display:flex;flex-direction:column;gap:3px;font-weight:600}
+.info-field label{font-size:.68rem;text-transform:uppercase;opacity:.8}
+input,select,textarea{padding:6px 8px;border:1px solid var(--border-color);border-radius:6px;font-size:.78rem;width:100%;box-sizing:border-box;font-family:inherit}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--accent-color);box-shadow:0 0 0 2px rgba(37,99,235,.15)}
+.form-section{display:flex;flex-direction:column;gap:12px}
+.tables-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:14px;align-items:start}
+@media (max-width:950px){.tables-grid{grid-template-columns:1fr}}
+.table-card{display:flex;flex-direction:column;gap:8px;background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:12px}
+.table-card h2{font-size:.82rem;color:var(--text-color);border-bottom:1px solid var(--border-color);padding-bottom:5px;margin:0 0 6px 0;text-transform:uppercase;font-weight:700}
+.table-responsive{overflow-x:auto;border-radius:6px;border:1px solid var(--border-color);max-height:220px}
+.ultra-compact-table{font-size:.7rem;width:100%;border-collapse:collapse}
+.ultra-compact-table th{background-color:var(--bench-bg);color:var(--text-color);padding:5px 6px;text-align:left;border-bottom:1px solid var(--border-color);font-weight:700;font-size:.66rem;text-transform:uppercase}
+.ultra-compact-table td{padding:5px 6px;border-bottom:1px solid var(--bench-bg);vertical-align:middle}
+.ultra-compact-table input,.ultra-compact-table select{padding:3px 5px;font-size:.72rem;height:24px}
+.cols-config-container{display:flex;gap:3px;flex-wrap:wrap;align-items:center}
+.col-bench-unit{display:flex;align-items:center;gap:2px;background:var(--bench-bg);padding:2px 4px;border-radius:4px;border:1px solid var(--border-color);font-size:.65rem}
+.col-bench-unit input{width:30px;padding:1px;text-align:center;font-size:.7rem;height:20px}
+.btn-toolbar{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.btn-add{background-color:#059669;color:#fff;border:none;padding:5px 10px;border-radius:5px;font-weight:700;cursor:pointer;font-size:.72rem}
+.btn-sm-add{background-color:var(--accent-color);color:#fff;border:none;padding:2px 6px;border-radius:3px;font-size:.65rem;cursor:pointer;font-weight:700;height:22px}
+.btn-remove{background-color:#ef4444;color:#fff;border:none;border-radius:4px;padding:2px 6px;font-weight:700;cursor:pointer;font-size:.68rem}
+.btn-reset{background-color:#64748b;color:#fff;border:none;padding:5px 10px;border-radius:5px;font-weight:700;cursor:pointer;font-size:.72rem}
+.btn-upload{background-color:#4f46e5;color:#fff;border:none;padding:5px 10px;border-radius:5px;font-weight:700;cursor:pointer;font-size:.72rem;display:inline-flex;align-items:center;gap:4px}
+.btn-generate{padding:12px;background:linear-gradient(135deg,var(--primary-color),var(--accent-color));color:#fff;border:none;border-radius:8px;font-size:.9rem;font-weight:800;cursor:pointer;width:100%}
+.btn-print,.btn-print-att{background-color:#059669;color:#fff;border:none;padding:6px 12px;border-radius:5px;font-size:.78rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:5px}
+.btn-print-att{background-color:var(--accent-color)}
+.status-badge{font-size:.72rem;color:#059669;font-weight:700;margin-left:auto;opacity:0;transition:opacity .3s ease}
+.info-bar{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;font-size:.75rem}
+.info-card{background:var(--bench-bg);padding:6px 12px;border-radius:20px;border:1px solid var(--border-color);font-weight:700;color:var(--text-color)}
+.print-hint-banner{background:#eff6ff;border:1px solid #bfdbfe;border-left:4px solid var(--accent-color);padding:8px 12px;border-radius:6px;font-size:.75rem;color:#1e3a8a;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.summary-table-container{border:1px solid var(--border-color);border-radius:8px;overflow-x:auto;background:#fff;margin-bottom:15px}
+.summary-table{width:100%;border-collapse:collapse;font-size:.8rem;text-align:center}
+.summary-table th{background-color:var(--header-bg);color:#fff;padding:6px 4px;font-weight:700;border:1px solid var(--border-color)}
+.summary-table td{padding:5px 4px;border:1px solid var(--border-color);font-weight:600}
+.summary-title{font-size:.9rem;font-weight:800;color:var(--primary-color);text-align:center;margin:8px 0;text-transform:uppercase}
+.seating-strength-notice{background:#fff;border:2px solid #000;border-radius:6px;padding:10px;margin-bottom:20px;page-break-after:always;page-break-inside:avoid;color:#000;width:100%}
+.notice-board-header{text-align:center;margin-bottom:8px;border-bottom:2px solid #000;padding-bottom:6px}
+.notice-board-title{font-size:1rem;font-weight:900;color:#000;text-transform:uppercase;margin:0 0 2px 0}
+.notice-board-sub{font-size:.78rem;font-weight:800;color:#000}
+.exact-notice-table{width:100%;border-collapse:collapse;font-size:.88rem;text-align:center}
+.exact-notice-table td,.exact-notice-table th{border:2px solid #000;padding:6px;vertical-align:middle}
+.room-block{background:#fff;border:1px solid var(--border-color);border-radius:10px;padding:14px;margin-bottom:20px;page-break-after:always;box-sizing:border-box;width:100%}
+.room-title{text-align:center;color:var(--primary-color);font-size:1.25rem;font-weight:800;margin:0 0 4px 0}
+.room-sub-header{text-align:center;font-size:.8rem;font-weight:600;margin-bottom:6px;color:#475569}
+.blackboard{background:var(--header-bg);color:#f8fafc;text-align:center;padding:6px;margin:0 auto 12px auto;border-radius:4px;font-weight:700;letter-spacing:2px;width:45%;font-size:.78rem;text-transform:uppercase}
+.classroom-grid{display:flex;gap:12px;justify-content:space-evenly;align-items:flex-start;overflow-x:auto;padding:6px 2px;width:100%}
+.column{display:flex;flex-direction:column;gap:8px;align-items:center;flex:1 1 0px;min-width:180px}
+.column-header{font-weight:700;color:var(--primary-color);background-color:var(--bench-bg);padding:6px 12px;border-radius:14px;font-size:.75rem;border:1px solid var(--border-color);text-align:center;width:90%}
+.bench{background-color:var(--bench-bg);border:1px solid var(--border-color);border-radius:8px;padding:6px;display:flex;flex-direction:column;align-items:center;width:100%}
+.bench-number{font-size:.7rem;font-weight:700;color:#64748b;margin-bottom:4px}
+.seats-container{display:flex;gap:8px;width:100%;justify-content:space-between}
+.seat{color:#000;background:#fff;border:1px solid var(--border-color);padding:6px 4px;border-radius:6px;width:50%;text-align:center;min-height:50px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.seat-ht{font-size:.95rem;font-weight:800;color:var(--primary-color)}
+.seat-meta{font-size:.65rem;font-weight:700;color:#475569;margin-top:2px}
+.seat.empty{background-color:#e2e8f0;color:#64748b}
+.attendance-sheet{background:#fff;border:2px solid #000;padding:8px;margin-bottom:15px;page-break-after:always;page-break-inside:avoid;color:#000;display:flex;flex-direction:column;justify-content:space-between;min-height:98vh;box-sizing:border-box}
+.att-table-header{width:100%;border-collapse:collapse;font-size:.78rem;margin-bottom:-1px}
+.att-table-header td{border:1px solid #000;padding:4px 6px;font-weight:700}
+.att-main-title{text-align:center;font-size:.95rem;font-weight:800;text-transform:uppercase}
+.att-center-title{text-align:center;font-size:.85rem;font-weight:700;text-transform:uppercase}
+.att-table-wrapper{flex-grow:1;display:flex;flex-direction:column}
+.att-table-body{width:100%;height:100%;border-collapse:collapse}
+.att-table-body td,.att-table-body th{border:1px solid #000;padding:2px 4px;text-align:center}
+.att-table-body th{font-size:.75rem;font-weight:700;background-color:#f8fafc;height:24px}
+.att-table-body td{font-size:.8rem;vertical-align:middle}
+.att-table-body td.ht-cell{font-weight:800;font-size:1.1rem;letter-spacing:1px}
+.footer-credit{text-align:center;margin-top:14px;font-size:.7rem;color:#64748b;font-weight:600}
+@media print{
+  @page{size:A4 portrait;margin:4mm}
+  body{background-color:#fff;padding:0}
+  .btn-print,.btn-print-att,.footer-credit,.form-section,.no-print,.print-actions,.status-badge,.top-toolbar,button{display:none!important}
+  .container{box-shadow:none;width:100%;max-width:100%;padding:0}
+  .seating-strength-notice{border:2px solid #000!important;page-break-after:always!important;page-break-inside:avoid!important;padding:4px!important;height:98vh!important;display:flex!important;flex-direction:column!important;justify-content:space-between!important}
+  .room-block{border:1px solid #000;page-break-after:always;padding:10px}
+  .attendance-sheet{border:2px solid #000!important;page-break-after:always!important;page-break-inside:avoid!important;margin:0!important;padding:6px!important;height:98vh!important}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="top-toolbar">
+    <div style="display:flex;align-items:center;gap:6px">
+      <label for="themeSelect" style="font-size:.72rem;font-weight:700">🎨 Theme:</label>
+      <select id="themeSelect" class="theme-select" onchange="changeTheme(this.value)">
+        <option value="executive">Executive Dark</option>
+        <option value="slate">Modern Slate</option>
+        <option value="emerald">Emerald Green</option>
+        <option value="indigo">Royal Indigo</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="header-bar">
+    <h1>Examination Seating & Attendance Generator</h1>
+    <a href="https://www.youtube.com/@Gudurusathishkumar" target="_blank" class="yt-badge" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>NewGen eEducation
+    </a>
+  </div>
+
+  <div class="exam-info-panel">
+    <div class="info-field">
+      <label for="examInputText">Exam Type:</label>
+      <input id="examInputText" placeholder="IPE Feb-Mar 2026" oninput="saveToLocalStorage()">
+    </div>
+    <div class="info-field">
+      <label for="centreNameInput">College / Centre Name:</label>
+      <input id="centreNameInput" placeholder="GOVT. JUNIOR COLLEGE,____" oninput="saveToLocalStorage()">
+    </div>
+    <div class="info-field">
+      <label for="districtInput">District Name:</label>
+      <input id="districtInput" placeholder="BHADRADRI KOTHAGUDEM Dist" oninput="saveToLocalStorage()">
+    </div>
+    <div class="info-field">
+      <label for="centreNoInput">Centre Code (C.NO):</label>
+      <input id="centreNoInput" placeholder="44015" style="width:90px" oninput="saveToLocalStorage()">
+    </div>
+    <div class="info-field">
+      <label for="courseTypeSelect">Stream / Course:</label>
+      <select id="courseTypeSelect" onchange="toggleCustomCourseInput(this.value);saveToLocalStorage()">
+        <option value="General & Vocational">General & Vocational</option>
+        <option value="CUSTOM">Custom Stream...</option>
+      </select>
+      <input id="customCourseInput" placeholder="Enter Stream" style="display:none;width:110px" oninput="saveToLocalStorage()">
+    </div>
+    <div class="info-field">
+      <label for="examDate">Date:</label>
+      <input type="date" id="examDate">
+    </div>
+    <div class="info-field">
+      <label for="examSession">Session:</label>
+      <select id="examSession">
+        <option value="FN">FN (Morning)</option>
+        <option value="AN">AN (Afternoon)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <div class="print-hint-banner">
+      <div>ℹ️ <strong>Room Strength Setup:</strong> Enter the <strong>Strength Cap</strong> for any room to limit candidate allocation (e.g. 24, 28). If left blank, it automatically defaults to full bench capacity (Total Benches × 2).</div>
+    </div>
+
+    <div class="tables-grid">
+      <div class="table-card">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <h2>1. Room Layout Configuration</h2>
+          <span id="saveStatus" class="status-badge">✓ Saved</span>
+        </div>
+        <div class="table-responsive">
+          <table class="input-table ultra-compact-table">
+            <thead>
+              <tr>
+                <th style="width:25%">Room Name</th>
+                <th style="width:18%">Stream</th>
+                <th style="width:16%" title="Max strength allowed in this room">Strength Cap</th>
+                <th style="width:33%">Columns (Benches)</th>
+                <th style="width:8%;text-align:center">Del</th>
+              </tr>
+            </thead>
+            <tbody id="roomTableBody"></tbody>
+          </table>
+        </div>
+        <div class="btn-toolbar">
+          <button class="btn-add" onclick="addRoomTableRow()">+ Add Room</button>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <h2>2. Student Data Entry</h2>
+        <div style="font-size:.72rem;color:#64748b;margin-bottom:4px">Format: <strong>Sl.No &nbsp; Hallticket &nbsp; PaperCode &nbsp; Medium</strong></div>
+        
+        <div id="singleStudentBoxContainer" style="display:none">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+            <label style="font-weight:700;font-size:.75rem">Student List:</label>
+            <label class="btn-upload">📁 Upload PDF <input type="file" id="singlePdfUpload" accept=".pdf" style="display:none" onchange="handlePdfUpload(event,'single')"></label>
+          </div>
+          <textarea id="studentRawData" style="min-height:70px;height:70px" placeholder="1  2544109893  137  E&#10;41  2544109933  61  A"></textarea>
+        </div>
+
+        <div id="dualStudentBoxContainer" style="display:flex;flex-direction:column;gap:8px">
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px">
+              <label style="font-weight:700;font-size:.75rem;color:var(--primary-color)">General Students List:</label>
+              <label class="btn-upload">📁 Upload General PDF <input type="file" id="generalPdfUpload" accept=".pdf" style="display:none" onchange="handlePdfUpload(event,'general')"></label>
             </div>
-        `;const L=document.getElementById("layoutArea");L.style.display="block",L.scrollIntoView({behavior:"smooth"})}function buildSeatingStrengthNoticeBoardHTML(t,e,n,o,a,r){let i=0,l="";return t.forEach((t=>{i+=t.strength;let e=[],n=[],o=[];t.halltickets.forEach(((t,a)=>{a%3==0?e.push(t):a%3==1?n.push(t):o.push(t)}));const a=`
-                <div style="display: flex; gap: 16px; text-align: left; padding: 6px;">
-                    <div style="flex: 1; font-size: 1.15rem; font-weight: 800; line-height: 1.7; word-break: break-all; letter-spacing: 0.4px; color: #000;">${e.join("<br>")}</div>
-                    <div style="flex: 1; font-size: 1.15rem; font-weight: 800; line-height: 1.7; word-break: break-all; letter-spacing: 0.4px; color: #000;">${n.join("<br>")}</div>
-                    <div style="flex: 1; font-size: 1.15rem; font-weight: 800; line-height: 1.7; word-break: break-all; letter-spacing: 0.4px; color: #000;">${o.join("<br>")}</div>
-                </div>
-            `;l+=`
-                <tr>
-                    <td style="width: 1%; white-space: nowrap; font-weight: 900; font-size: 0.85rem; text-transform: uppercase; line-height: 1.25; padding: 8px 6px; text-align: center; color: #000;">
-                        ${t.roomLabel.split(" ")[0]} ${t.roomLabel.split(" ")[1]}<br><span style="font-size: 0.68rem; font-weight: 700; color: #334155;">(${t.stream})</span>
-                    </td>
-                    <td style="width: 98%; padding: 10px 14px;">${a}</td>
-                    <td style="width: 1%; white-space: nowrap; font-weight: 900; font-size: 1.3rem; text-align: center; padding: 8px 10px; color: #000;">${t.strength}</td>
-                </tr>
-            `})),`
-            <div class="seating-strength-notice" data-stream="${1===t.length?t[0].stream:t.some((t=>"GEN"===t.stream))&&!t.some((t=>"VOC"===t.stream))?"GEN":t.some((t=>"VOC"===t.stream))&&!t.some((t=>"GEN"===t.stream))?"VOC":"MIX"}">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;" class="no-print">
-                    <div style="font-weight: bold; font-size: 0.9rem; color: #000;">📋 ROOM WISE SEATING STRENGTH NOTICE BOARD</div>
-                    <button class="btn-print-att" onclick="printSingleElement(this.closest('.seating-strength-notice'), 'Seating Strength Notice Board')">🖨️ Print Notice Board PDF</button>
-                </div>
-                <div class="notice-board-header">
-                    <h2 class="notice-board-title">${e}</h2>
-                    <div class="notice-board-sub">Centre: ${n} (C.NO: ${o}) | Date: ${a} (${r})</div>
-                </div>
-                <div class="summary-table-container">
-                    <table class="exact-notice-table" style="table-layout: auto; width: 100%;">
-                        <thead>
-                            <tr>
-                                <th style="width: 1%; white-space: nowrap; font-size: 0.65rem; padding: 6px 6px; color: #000;">ROOM</th>
-                                <th style="width: 98%; font-size: 1.05rem; padding: 8px 10px; color: #000;">ALLOTTED HALLTICKET NUMBERS</th>
-                                <th style="width: 1%; white-space: nowrap; font-size: 0.65rem; padding: 6px 6px; color: #000;">TOTAL</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${l}
-                        </tbody>
-                        <tfoot>
-                            <tr style="background-color: #f1f5f9; font-weight: 900; color: #000;">
-                                <td colspan="2" style="text-align: right; padding-right: 20px; font-size: 1.05rem; padding: 10px 14px;">TOTAL CANDIDATES ALLOTTED:</td>
-                                <td style="font-size: 1.35rem; white-space: nowrap; padding: 10px 14px; text-align: center;">${i}</td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
+            <textarea id="studentGeneralRawData" style="min-height:60px;height:60px" placeholder="1  2544109893  137  E"></textarea>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px">
+              <label style="font-weight:700;font-size:.75rem;color:var(--accent-color)">Vocational Students List:</label>
+              <label class="btn-upload">📁 Upload Vocational PDF <input type="file" id="vocationalPdfUpload" accept=".pdf" style="display:none" onchange="handlePdfUpload(event,'vocational')"></label>
             </div>
-        `}function printSeatingPlan(){const t=document.getElementById("roomsOutputContainer");t&&t.innerHTML.trim()?printOutputElement(t,"Seating Plan","\n            .room-block { background:#fff; border:1px solid #000; padding:10px; margin:0 0 12px 0; page-break-after:always; page-break-inside:avoid; box-sizing:border-box; width:100%; }\n            .room-block:last-child { page-break-after:auto; }\n            .room-title { text-align:center; font-size:1.25rem; font-weight:800; margin:0 0 4px; }\n            .room-sub-header { text-align:center; font-size:.82rem; font-weight:600; margin-bottom:8px; }\n            .blackboard { background:#000 !important; color:#fff !important; text-align:center; padding:6px; margin:0 auto 12px; border-radius:3px; font-weight:700; width:50%; font-size:.82rem; text-transform:uppercase; }\n            .classroom-grid { display:flex; gap:12px; justify-content:space-evenly; align-items:flex-start; width:100%; box-sizing:border-box; }\n            .column { display:flex; flex-direction:column; gap:8px; align-items:center; flex:1 1 0; min-width:0; }\n            .column-header { font-weight:700; padding:5px 10px; border:1px solid #000; text-align:center; width:90%; }\n            .bench { background:#fff; border:1px solid #000; padding:6px; display:flex; flex-direction:column; align-items:center; width:100%; box-sizing:border-box; }\n            .bench-number { font-size:.7rem; font-weight:700; margin-bottom:5px; }\n            .seats-container { display:flex; gap:7px; width:100%; justify-content:space-between; }\n            .seat { color:#000; background:#fff; border:1px solid #000; padding:7px 5px; width:50%; text-align:center; box-sizing:border-box; min-height:48px; display:flex; flex-direction:column; align-items:center; justify-content:center; }\n            .seat-ht { font-size:1rem; font-weight:800; }\n            .seat-meta { font-size:.68rem; font-weight:700; margin-top:2px; }\n            .seat.empty { background:#eee; }\n        "):alert("Please generate the seating plan first.")}function printPaperSummary(){const t=document.getElementById("paperSummaryOutput");if(!t||!t.innerHTML.trim())return void alert("Please generate the paper summary first.");const e=t.cloneNode(!0);if(e.querySelectorAll(".seating-strength-notice").forEach((t=>t.remove())),!e.innerHTML.trim())return void alert("No paper summary is available to print.");const n=(t,e="")=>{const n=document.getElementById(t);return n?(n.value||n.textContent||"").trim():e},o=n("centreNameInput","GOVT. JUNIOR COLLEGE,___"),a=n("centreNoInput",""),r=n("districtInput",""),i=n("examDate",""),l=n("examSession","");let d=i;if("function"==typeof formatDateFormatted&&i)try{d=formatDateFormatted(i)}catch(t){}const s=document.createElement("div");s.className="paper-summary-centre-header",s.innerHTML=`
-            <div class="paper-summary-centre-left">
-                <div class="paper-summary-college">${o}</div>
-                <div>Centre Code: ${a}</div>
-                <div>District: ${r}</div>
-            </div>
-            <div class="paper-summary-centre-right">
-                <div>Date: ${d}</div>
-                <div>Session: ${l}</div>
-            </div>
-        `;const c=document.createElement("div");for(c.appendChild(s);e.firstChild;)c.appendChild(e.firstChild);printOutputElement(c,"Paper Summary","\n            .paper-summary-centre-header { width:100%; box-sizing:border-box; display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:center; background:#fff !important; color:#000 !important; border:3px solid #000 !important; border-bottom:0 !important; padding:8px 10px; font-weight:900; }\n            .paper-summary-centre-left { text-align:left; font-size:1rem; line-height:1.35; }\n            .paper-summary-centre-right { text-align:right; font-size:1rem; line-height:1.35; }\n            .paper-summary-college { font-size:1.35rem; line-height:1.2; font-weight:900; text-transform:uppercase; margin-bottom:3px; }\n            .summary-table-container { border:1px solid #000 !important; overflow:hidden; background:#fff !important; color:#000 !important; margin-bottom:12px; page-break-inside:avoid; }\n            .summary-title { font-size:.95rem; font-weight:900; text-align:center; margin:8px 0; text-transform:uppercase; color:#000 !important; background:#fff !important; }\n            .summary-table { width:100%; border-collapse:collapse; font-size:.78rem; text-align:center; color:#000 !important; background:#fff !important; }\n            .summary-table th, .summary-table td { padding:5px 4px; border:1px solid #000 !important; color:#000 !important; background:#fff !important; font-weight:800; }\n            .summary-table th { font-weight:900 !important; }\n            p { text-align:center; color:#000 !important; }\n        ")}function printNoticeBoard(t){const e=Array.from(document.querySelectorAll("#paperSummaryOutput .seating-strength-notice"));if(0===e.length)return void alert("Please generate the notice board first.");let n,o;"GEN"===t?(n=e.find((t=>"GEN"===t.dataset.stream)),o="General Notice Board"):"VOC"===t?(n=e.find((t=>"VOC"===t.dataset.stream)),o="Vocational Notice Board"):(n=e[0],o="Notice Board"),n?printOutputElement(n,o,"\n            body { background:#fff !important; color:#000 !important; }\n            .seating-strength-notice { background:#fff !important; color:#000 !important; border:3px solid #000 !important; box-shadow:none !important; border-radius:0 !important; padding:6px; min-height:98vh; }\n            .notice-board-header { text-align:center !important; margin-bottom:10px !important; border-bottom:4px solid #000 !important; padding:7px 5px 9px !important; background:#fff !important; }\n            .notice-board-title { font-size:1.75rem !important; line-height:1.15 !important; font-weight:900 !important; text-transform:uppercase !important; margin:0 0 7px !important; }\n            .notice-board-sub { font-size:1.25rem !important; line-height:1.35 !important; font-weight:900 !important; margin:3px 0 !important; }\n            .exact-notice-table { background:#fff !important; color:#000 !important; border-collapse:collapse !important; width:100%; text-align:center; }\n            .exact-notice-table th, .exact-notice-table td { border:2px solid #000 !important; padding:5px 6px; }\n            .exact-notice-table th { font-size:.88rem !important; font-weight:900 !important; text-transform:uppercase; }\n            .exact-notice-table td { font-size:.84rem !important; font-weight:800 !important; }\n        "):alert(("GEN"===t?"General":"Vocational")+" notice board is not available.")}function printOutputElement(t,e,n=""){const o=window.open("","","width=1000,height=800");o?(o.document.write(`
-            <!DOCTYPE html><html><head><meta charset="UTF-8"><title>${e}</title><style>@page { size:A4 portrait; margin:6mm; } * { box-sizing:border-box; } body { font-family:Arial,sans-serif; padding:0; margin:0; color:#000; background:#fff; } button,.no-print { display:none !important; } ${n}</style></head><body>${t.outerHTML}<script>window.onload = function() { setTimeout(function() { window.print(); window.close(); }, 150); };<\/script></body></html>`),o.document.close()):alert("Please allow pop-ups for this site to print.")}function printSingleElement(t,e){const n=window.open("","","width=900,height=700");n.document.write(`
-            <html><head><title>${e}</title><style>@page { size: A4 portrait; margin: 4mm; } body { font-family: Arial, sans-serif; color: #000; padding: 0; margin: 0; } .seating-strength-notice { border: 2px solid #000; padding: 6px; box-sizing: border-box; height: 98vh; display: flex; flex-direction: column; justify-content: space-between; color: #000; } .summary-table-container { border: 1px solid #000; border-radius: 4px; overflow: hidden; flex-grow: 1; } .exact-notice-table { width: 100%; border-collapse: collapse; text-align: center; } .exact-notice-table th, .exact-notice-table td { border: 2px solid #000; padding: 4px 6px; } .exact-notice-table th { background-color: #fff !important; font-weight: 900; font-size: 0.72rem; } .notice-board-header { text-align: center; margin-bottom: 4px; border-bottom: 2px solid #000; } .notice-board-title { font-size: 0.9rem; font-weight: 900; } button, .no-print { display: none !important; }</style></head><body>${t.outerHTML}<script>window.onload = function() { window.print(); window.close(); }<\/script></body></html>`),n.document.close()}function generateAttendanceSheet(t,e,n,o,a,r,i){const l=document.getElementById("attendanceSheetsContainer"),d=e.length,s=Math.ceil(d/26)||1,c=document.createElement("div");c.className="room-attendance-group";for(let l=1;l<=s;l++){const m=document.createElement("div");m.className="attendance-sheet";const p=26*(l-1),u=e.slice(p,p+26);let g="";for(let t=0;t<26;t++){const e=u[t];g+=`
-                    <tr>
-                        <td style="width: 8%; font-weight: bold;">${e?p+t+1:""}</td>
-                        <td style="width: 35%;" class="ht-cell">${e?e.ht:""}</td>
-                        <td style="width: 25%;"></td>
-                        <td style="width: 32%;"></td>
-                    </tr>
-                `}const h=s>1?` (Page ${l} of ${s})`:"";m.innerHTML=`
-                <div class="no-print" style="text-align: right; margin-bottom: 6px;">
-                    <button class="btn-print-att" onclick="printSingleSheet(this)">🖨️ Print Attendance Sheet (${t}${h})</button>
-                </div>
-                <table class="att-table-header">
-                    <tr><td colspan="2" class="att-main-title">${n}</td></tr>
-                    <tr><td colspan="2" class="att-center-title">Name of the Centre: ${o}</td></tr>
-                    <tr><td style="width: 60%;">Date of Examination : ${r} ${i}</td><td style="width: 40%;">C.NO : ${a}</td></tr>
-                    <tr><td style="width: 60%;">Subject and Paper :</td><td style="width: 40%; font-size: 0.95rem; font-weight: bold; text-align: center;">${t} (Total: ${d})${h}</td></tr>
-                    <tr><td colspan="2">Name of the Invigilator (s) :</td></tr>
-                </table>
-                <div class="att-table-wrapper">
-                    <table class="att-table-body">
-                        <thead><tr><th style="width: 8%;">Sl.No</th><th style="width: 35%;">Regd. No. of Candidates</th><th style="width: 25%;">Sl.No.of the Main Answer Book</th><th style="width: 32%;">Sign.of the Candidates</th></tr></thead>
-                        <tbody>${g}</tbody>
-                        <tfoot>
-                            <tr><td colspan="2" style="text-align: right; font-weight: bold; height: 26px;">PRESENT</td><td></td><td rowspan="3" style="vertical-align: bottom; font-weight: bold; text-align: center; padding-bottom: 4px;">Sign.of Invigilator</td></tr>
-                            <tr><td colspan="2" style="text-align: right; font-weight: bold; height: 26px;">ABSENT</td><td></td></tr>
-                            <tr><td colspan="2" style="text-align: right; font-weight: bold; height: 26px;">TOTAL</td><td></td></tr>
-                        </tfoot>
-                    </table>
-                </div>
-            `,c.appendChild(m)}l.appendChild(c)}function printSingleSheet(t){const e=t.closest(".attendance-sheet"),n=window.open("","","width=900,height=700");n.document.write(`
-            <html><head><title>Attendance Sheet Print</title><style>@page { size: A4 portrait; margin: 6mm; } body { font-family: Arial, sans-serif; padding: 0; margin: 0; color: #000; } .attendance-sheet { border: 2px solid #000; padding: 6px; height: 98vh; display: flex; flex-direction: column; justify-content: space-between; } .att-table-header { width: 100%; border-collapse: collapse; margin-bottom: -1px; font-size: 0.8rem; } .att-table-header td { border: 1px solid #000; padding: 4px 6px; font-weight: bold; } .att-main-title { text-align: center; font-size: 0.95rem; font-weight: 800; } .att-center-title { text-align: center; font-size: 0.88rem; font-weight: bold; } .att-table-wrapper { flex-grow: 1; display: flex; flex-direction: column; } .att-table-body { width: 100%; height: 100%; border-collapse: collapse; } .att-table-body th, .att-table-body td { border: 1px solid #000; padding: 2px 4px; text-align: center; } .att-table-body th { font-size: 0.78rem; font-weight: bold; background-color: #fff; height: 24px; } .att-table-body td { font-size: 0.82rem; vertical-align: middle; } .att-table-body td.ht-cell { font-weight: bold; font-size: 1.15rem; letter-spacing: 1px; } .no-print { display: none !important; }</style></head><body>${e.outerHTML}<script>window.onload = function() { window.print(); window.close(); }<\/script></body></html>`),n.document.close()}function printAllAttendanceSheets(){const t=document.querySelectorAll(".attendance-sheet");if(0===t.length)return void alert("Please generate seating and attendance plan first.");let e="";t.forEach((t=>{e+=t.outerHTML}));const n=window.open("","","width=900,height=700");n.document.write(`
-            <html><head><title>All Attendance Sheets Print</title><style>@page { size: A4 portrait; margin: 6mm; } body { font-family: Arial, sans-serif; padding: 0; margin: 0; color: #000; } .attendance-sheet { border: 2px solid #000; padding: 6px; margin-bottom: 0; page-break-after: always; height: 98vh; display: flex; flex-direction: column; justify-content: space-between; } .att-table-header { width: 100%; border-collapse: collapse; margin-bottom: -1px; font-size: 0.8rem; } .att-table-header td { border: 1px solid #000; padding: 4px 6px; font-weight: bold; } .att-main-title { text-align: center; font-size: 0.95rem; font-weight: 800; } .att-center-title { text-align: center; font-size: 0.88rem; font-weight: bold; } .att-table-wrapper { flex-grow: 1; display: flex; flex-direction: column; } .att-table-body { width: 100%; height: 100%; border-collapse: collapse; } .att-table-body th, .att-table-body td { border: 1px solid #000; padding: 2px 4px; text-align: center; } .att-table-body th { font-size: 0.78rem; font-weight: bold; background-color: #fff; height: 24px; } .att-table-body td { font-size: 0.82rem; vertical-align: middle; } .att-table-body td.ht-cell { font-weight: bold; font-size: 1.15rem; letter-spacing: 1px; } .no-print { display: none !important; }</style></head><body>${e}<script>window.onload = function() { window.print(); window.close(); }<\/script></body></html>`),n.document.close()}function buildGeneralSummaryHTML(t,e,n,o){if(0===n.length)return`<div class="summary-table-container"><div class="summary-title">📊 Room-Wise Question Paper Summary Statement (${t})</div><p style="text-align: center; padding: 10px; color: #64748b;">No students allotted for this stream.</p></div>`;const a=n.length*o.length;let r='<tr><th rowspan="2">Room Name</th>',i="<tr>";n.forEach((t=>{r+=`<th colspan="${o.length}">Paper Code: ${t.pc}</th>`,o.forEach((t=>{i+=`<th>Med (${t})</th>`}))})),r+='<th rowspan="2">Total</th></tr>',i+="</tr>";let l="",d=0;const s={};function c(){let t="";for(let e=0;e<a;e++)t+="<td></td>";return t+="<td></td>",t}e.forEach((t=>{let e=0,a=`<tr><td><strong>${t.roomName}</strong></td>`;n.forEach((n=>{o.forEach((o=>{const r=`${n.sc}_${n.pc}_${o}`,i=t.counts[r]||0;e+=i,s[r]=(s[r]||0)+i,a+=`<td>${i>0?i:"-"}</td>`}))})),d+=e,a+=`<td><strong>${e}</strong></td></tr>`,l+=a}));let m='<tr style="background-color: var(--bench-bg);"><td><strong>TOTAL PAPERS</strong></td>';n.forEach((t=>{o.forEach((e=>{const n=`${t.sc}_${t.pc}_${e}`,o=s[n]||0;m+=`<td><strong>${o}</strong></td>`}))})),m+=`<td><strong>${d}</strong></td></tr>`;const p=document.getElementById("examSession").value.includes("FN")?"8.45 AM":"1.45 PM";let u=`${m}<tr><td><strong>${p}</strong></td>${c()}</tr><tr><td><strong>ABSENT</strong></td>${c()}</tr><tr><td><strong>PRESENT</strong></td>${c()}</tr><tr><td><strong>TOTAL PAPERS</strong></td>${c()}</tr>`;return`<div class="summary-table-container"><div class="summary-title">📊 Paper Summary (${t})</div><table class="summary-table"><thead>${r}${i}</thead><tbody>${l}</tbody><tfoot>${u}</tfoot></table></div>`}function buildVocationalSummaryHTML(t,e,n){if(0===n.length)return`<div class="summary-table-container"><div class="summary-title">📊 Room-Wise Course Code Summary Statement (${t})</div><p style="text-align: center; padding: 10px; color: #64748b;">No students allotted for this stream.</p></div>`;const o=n.length;let a="<tr><th>Room Name</th>";n.forEach((t=>{a+=`<th>Paper Code (${t})</th>`})),a+="<th>Total</th></tr>";let r="",i=0;const l={};function d(){let t="";for(let e=0;e<o;e++)t+="<td></td>";return t+="<td></td>",t}e.forEach((t=>{let e=0,o=`<tr><td><strong>${t.roomName}</strong></td>`;n.forEach((n=>{const a=t.counts[n]||0;e+=a,l[n]=(l[n]||0)+a,o+=`<td>${a>0?a:"-"}</td>`})),i+=e,o+=`<td><strong>${e}</strong></td></tr>`,r+=o}));let s='<tr style="background-color: var(--bench-bg);"><td><strong>TOTAL STUDENTS</strong></td>';n.forEach((t=>{const e=l[t]||0;s+=`<td><strong>${e}</strong></td>`})),s+=`<td><strong>${i}</strong></td></tr>`;const c=document.getElementById("examSession").value.includes("FN")?"8.45 AM":"1.45 PM";let m=`${s}<tr><td><strong>${c}</strong></td>${d()}</tr><tr><td><strong>ABSENT</strong></td>${d()}</tr><tr><td><strong>PRESENT</strong></td>${d()}</tr><tr><td><strong>TOTAL PAPERS</strong></td>${d()}</tr>`;return`<div class="summary-table-container"><div class="summary-title">📊 Vocational Medium Code Summary (${t})</div><table class="summary-table"><thead>${a}</thead><tbody>${r}</tbody><tfoot>${m}</tfoot></table></div>`}window.onload=function(){loadSavedTheme();const t=(new Date).toISOString().split("T")[0];document.getElementById("examDate").value=t,loadFromLocalStorage()||loadDefaultData()}</script></body></html>
+            <textarea id="studentVocationalRawData" style="min-height:60px;height:60px" placeholder="1  2644990101  124  24"></textarea>
+          </div>
+        </div>
+
+        <div class="btn-toolbar">
+          <button class="btn-reset" onclick="resetToDefaults()">Reset Sample Data</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-generate" onclick="generateSeatingAndAttendance()">Generate Seating Plan, Paper Summary & Attendance Sheets</button>
+  </div>
+
+  <div id="layoutArea" style="display:none;margin-top:16px">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px">
+      <span style="font-weight:800;font-size:.95rem;color:var(--text-color)">Generated Seating & Attendance Plan</span>
+      <div class="print-actions" style="display:flex;gap:6px;flex-wrap:wrap">
+        <button class="btn-print" onclick="printSeatingPlan()">🪑 Print Seating Plan</button>
+        <button class="btn-print-att" onclick="printAllAttendanceSheets()">📋 Print Attendance Sheets</button>
+        <button class="btn-print" onclick="printPaperSummary()">📊 Print Paper Summary</button>
+        <button class="btn-print" onclick="printNoticeBoard('GEN')">📌 General Notice Board</button>
+        <button class="btn-print" onclick="printNoticeBoard('VOC')">📌 Vocational Notice Board</button>
+      </div>
+    </div>
+    <div id="infoBar" class="info-bar"></div>
+    <div id="paperSummaryOutput"></div>
+    <div id="roomsOutputContainer"></div>
+    <div id="attendanceSheetsContainer"></div>
+  </div>
+
+  <div class="footer-credit">Designed & Developed by Guduru Sathish Kumar | NewGen eEducation</div>
+</div>
+
+<script>
+document.addEventListener("contextmenu", t => t.preventDefault());
+document.addEventListener("keydown", function(t) {
+  return "F12" === t.key || 123 === t.keyCode ? (t.preventDefault(), !1) : (!t.ctrlKey && !t.metaKey || "u" !== t.key && "U" !== t.key && 85 !== t.keyCode) && (!t.ctrlKey && !t.metaKey || !t.shiftKey || "i" !== t.key && "I" !== t.key && 73 !== t.keyCode) && (!t.ctrlKey && !t.metaKey || !t.shiftKey || "j" !== t.key && "J" !== t.key && 74 !== t.keyCode) && (!t.ctrlKey && !t.metaKey || !t.shiftKey || "c" !== t.key && "C" !== t.key && 67 !== t.keyCode) && (!t.ctrlKey && !t.metaKey || "s" !== t.key && "S" !== t.key && 83 !== t.keyCode) ? void 0 : (t.preventDefault(), !1);
+});
+setInterval(function() {
+  const t = Date.now();
+  (function() {}).constructor("debugger")();
+  Date.now() - t > 100 && (document.body.innerHTML = '<h2 style="color:red;text-align:center;margin-top:20%;">Developer Tools are restricted. Please close the console and reload.</h2>');
+}, 1000);
+
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+function changeTheme(t) {
+  document.documentElement.setAttribute("data-theme", t);
+  localStorage.setItem("examEngine_ipe_theme", t);
+}
+
+function loadSavedTheme() {
+  const t = localStorage.getItem("examEngine_ipe_theme") || "executive";
+  document.documentElement.setAttribute("data-theme", t);
+  document.getElementById("themeSelect").value = t;
+}
+
+function toggleCustomCourseInput(t) {
+  const e = document.getElementById("customCourseInput"),
+        n = document.getElementById("singleStudentBoxContainer"),
+        o = document.getElementById("dualStudentBoxContainer");
+  "CUSTOM" === t ? (e.style.display = "inline-block", n.style.display = "block", o.style.display = "none") : (e.style.display = "none", n.style.display = "none", o.style.display = "flex");
+}
+
+function getSelectedCourseType() {
+  const t = document.getElementById("courseTypeSelect").value;
+  return "CUSTOM" === t ? document.getElementById("customCourseInput").value.trim() || "Custom Stream" : t;
+}
+
+function loadDefaultData() {
+  document.getElementById("roomTableBody").innerHTML = "";
+  addRoomTableRow("ROOM NO 1", "General", [7, 7, 7], !1, "");
+  addRoomTableRow("ROOM NO 2", "Vocational", [7, 7, 7], !1, "");
+  document.getElementById("examInputText").value = "IPE MARCH 2026";
+  document.getElementById("centreNameInput").value = "GOVT. JUNIOR COLLEGE, ______";
+  document.getElementById("districtInput").value = "BHADRADRI KOTHAGUDEM DIST.";
+  document.getElementById("centreNoInput").value = "44***";
+  document.getElementById("courseTypeSelect").value = "General & Vocational";
+  toggleCustomCourseInput("General & Vocational");
+  document.getElementById("studentRawData").value = "";
+  document.getElementById("studentGeneralRawData").value = "";
+  document.getElementById("studentVocationalRawData").value = "";
+  saveToLocalStorage();
+}
+
+async function handlePdfUpload(t, e) {
+  const n = t.target.files[0];
+  if (n) try {
+    const o = await n.arrayBuffer(),
+          a = pdfjsLib.getDocument({ data: o }),
+          r = await a.promise;
+    let i = "", l = [];
+    for (let t = 1; t <= r.numPages; t++) {
+      const e = await r.getPage(t),
+            n = await e.getTextContent();
+      let o = [], a = [];
+      n.items.forEach(t => {
+        let e = t.transform[4], n = 5 * Math.round(t.transform[5] / 5);
+        e < 280 ? o.push({ x: e, y: n, str: t.str }) : a.push({ x: e, y: n, str: t.str });
+      });
+      let d = n.items.map(t => t.str).join(" ");
+      1 === t && (i += d);
+      parseColumnItems(o, l);
+      parseColumnItems(a, l);
+    }
+    parseExamHeaderDetails(i);
+    l.sort((t, e) => parseInt(t.slNo) - parseInt(e.slNo));
+    let d = l.map(t => `${t.slNo}  ${t.ht}  ${t.pc}  ${t.med}`).join("\n");
+    "single" === e ? document.getElementById("studentRawData").value = d : "general" === e ? document.getElementById("studentGeneralRawData").value = d : "vocational" === e && (document.getElementById("studentVocationalRawData").value = d);
+    saveToLocalStorage();
+    alert("PDF successfully parsed!");
+  } catch (t) {
+    console.error("Error parsing PDF:", t);
+    alert("Failed to extract text from PDF.");
+  } finally {
+    t.target.value = "";
+  }
+}
+
+function parseColumnItems(t, e) {
+  let n = {};
+  t.forEach(t => {
+    n[t.y] || (n[t.y] = []);
+    n[t.y].push(t);
+  });
+  Object.keys(n).sort((t, e) => Number(e) - Number(t)).forEach(t => {
+    let o = n[t].sort((t, e) => t.x - e.x).map(t => t.str).join(" ").trim().split(/\s+/);
+    if (o.length >= 4 && /^\d+$/.test(o[0]) && /^\d{10}$/.test(o[1])) {
+      e.push({ slNo: o[0], ht: o[1], pc: o[2], med: o.slice(3).join(" ").toUpperCase() });
+    } else {
+      let t = o.findIndex(t => /^\d{10}$/.test(t));
+      if (-1 !== t) {
+        let n = t > 0 && /^\d+$/.test(o[t - 1]) ? o[t - 1] : (e.length + 1).toString(),
+            a = o[t],
+            r = o[t + 1] || "02",
+            i = o.slice(t + 2).join(" ") || "E";
+        e.push({ slNo: n, ht: a, pc: r, med: i.toUpperCase() });
+      }
+    }
+  });
+}
+
+function parseExamHeaderDetails(t) {
+  if (!t) return;
+  const e = t.match(/(?:C\.?NO\.?|CENTRE\s*(?:CODE)?[:\s\-]*)\s*(\d{4,6})/i);
+  e && e[1] && (document.getElementById("centreNoInput").value = e[1]);
+  const n = t.match(/([A-Z0-9\.\,\s]{3,}(?:COLLEGE|INSTITUTE|SCHOOL|H\.?S\.?)[A-Z0-9\.\,\s]*)/i);
+  if (n && n[1]) {
+    let t = n[1].trim().replace(/\s+/g, " ");
+    t.length > 5 && (document.getElementById("centreNameInput").value = t);
+  }
+  const o = ["ADILABAD","BHADRADRI KOTHAGUDEM","HYDERABAD","JAGTIAL","JANGOAN","JAYASHANKAR BHUPALPALLY","JOGULAMBA GADWAL","KAMAREDDY","KARIMNAGAR","KHAMMAM","KOMARAM BHEEM ASIAFABAD","MAHABUBABAD","MAHABUBNAGAR","MANCHERIAL","MEDAK","MEDCHAL-MALKAJGIRI","MULUGU","NAGARKURNOOL","NALGONDA","NARAYANPET","NIRMAL","NIZAMABAD","PEDDAPALLI","RAJANNA SIRCILLA","RANGAREDDY","SANGAREDDY","SIDDIPET","SURVAPET","VIKARABAD","WANAPARTHY","WARANGAL","YADADRI BHUVANAGIRI"];
+  for (let e of o) {
+    if (t.toUpperCase().includes(e)) {
+      document.getElementById("districtInput").value = e;
+      break;
+    }
+  }
+  const a = t.match(/\b(0?[1-9]|[12]\d|3[01])[\/\-](0?[1-9]|1[0-2])[\/\-](\d{2,4})\b/);
+  if (a) {
+    let t = a[1].padStart(2, "0"),
+        e = a[2].padStart(2, "0"),
+        n = a[3];
+    2 === n.length && (n = "20" + n);
+    document.getElementById("examDate").value = `${n}-${e}-${t}`;
+  }
+  const r = t.toUpperCase();
+  r.includes("AFTERNOON") || r.includes("AN SESSION") || r.includes(" AN ") ? document.getElementById("examSession").value = "AN" : (r.includes("MORNING") || r.includes("FN SESSION") || r.includes(" FN ")) && (document.getElementById("examSession").value = "FN");
+}
+
+function saveToLocalStorage() {
+  const t = [];
+  document.querySelectorAll("#roomTableBody tr").forEach(e => {
+    const n = e.querySelector(".rm-name").value,
+          o = e.querySelector(".rm-type").value,
+          a = e.querySelector(".rm-strength").value,
+          r = [];
+    e.querySelectorAll(".col-benches").forEach(t => {
+      r.push(parseInt(t.value) || 0);
+    });
+    t.push({ name: n, type: o, strength: a, cols: r });
+  });
+
+  const e = document.getElementById("studentRawData").value,
+        n = document.getElementById("studentGeneralRawData").value,
+        o = document.getElementById("studentVocationalRawData").value,
+        a = document.getElementById("examInputText").value,
+        r = document.getElementById("centreNameInput").value,
+        i = document.getElementById("districtInput").value,
+        l = document.getElementById("centreNoInput").value,
+        d = document.getElementById("courseTypeSelect").value,
+        s = document.getElementById("customCourseInput").value;
+
+  localStorage.setItem("examEngine_ipe_rooms", JSON.stringify(t));
+  localStorage.setItem("examEngine_ipe_students_raw", e);
+  localStorage.setItem("examEngine_ipe_gen_raw", n);
+  localStorage.setItem("examEngine_ipe_voc_raw", o);
+  localStorage.setItem("examEngine_ipe_exam_title", a);
+  localStorage.setItem("examEngine_ipe_centre_name", r);
+  localStorage.setItem("examEngine_ipe_district", i);
+  localStorage.setItem("examEngine_ipe_centre_no", l);
+  localStorage.setItem("examEngine_ipe_course_type", d);
+  localStorage.setItem("examEngine_ipe_custom_course", s);
+  showSaveStatus();
+}
+
+function loadFromLocalStorage() {
+  const t = localStorage.getItem("examEngine_ipe_rooms"),
+        e = localStorage.getItem("examEngine_ipe_students_raw"),
+        n = localStorage.getItem("examEngine_ipe_gen_raw"),
+        o = localStorage.getItem("examEngine_ipe_voc_raw"),
+        a = localStorage.getItem("examEngine_ipe_exam_title"),
+        r = localStorage.getItem("examEngine_ipe_centre_name"),
+        i = localStorage.getItem("examEngine_ipe_district"),
+        l = localStorage.getItem("examEngine_ipe_centre_no"),
+        d = localStorage.getItem("examEngine_ipe_course_type"),
+        s = localStorage.getItem("examEngine_ipe_custom_course");
+
+  if (!t) return !1;
+  const c = JSON.parse(t);
+  document.getElementById("roomTableBody").innerHTML = "";
+  c.forEach(t => addRoomTableRow(t.name, t.type || "Any", t.cols, !1, t.strength || ""));
+  e && (document.getElementById("studentRawData").value = e);
+  n && (document.getElementById("studentGeneralRawData").value = n);
+  o && (document.getElementById("studentVocationalRawData").value = o);
+  null !== a && (document.getElementById("examInputText").value = a);
+  null !== r && (document.getElementById("centreNameInput").value = r);
+  null !== i && (document.getElementById("districtInput").value = i);
+  null !== l && (document.getElementById("centreNoInput").value = l);
+  null !== d && (document.getElementById("courseTypeSelect").value = "General" === d || "Vocational" === d ? "General & Vocational" : d, toggleCustomCourseInput(document.getElementById("courseTypeSelect").value));
+  null !== s && (document.getElementById("customCourseInput").value = s);
+  return !0;
+}
+
+function showSaveStatus() {
+  const t = document.getElementById("saveStatus");
+  t && (t.style.opacity = "1", setTimeout(() => { t.style.opacity = "0"; }, 1200));
+}
+
+function resetToDefaults() {
+  confirm("Reset room configurations and student list to sample data?") && loadDefaultData();
+}
+
+function addRoomTableRow(t = "", e = "Any", n = [7, 7], o = !0, a = "") {
+  const r = document.getElementById("roomTableBody"),
+        i = r.rows.length + 1,
+        l = document.createElement("tr"),
+        d = t || `ROOM NO ${i}`;
+  l.innerHTML = `
+    <td>
+      <input type="text" class="rm-name" value="${d}" placeholder="e.g. ROOM NO 1" oninput="saveToLocalStorage()">
+    </td>
+    <td>
+      <select class="rm-type" onchange="saveToLocalStorage()">
+        <option value="Any" ${"Any" === e ? "selected" : ""}>Any / Mixed</option>
+        <option value="General" ${"General" === e ? "selected" : ""}>General</option>
+        <option value="Vocational" ${"Vocational" === e ? "selected" : ""}>Vocational</option>
+      </select>
+    </td>
+    <td>
+      <input type="number" class="rm-strength" value="${a}" placeholder="Auto (Cap)" min="1" title="Max strength allowed in this room (optional)" oninput="saveToLocalStorage()">
+    </td>
+    <td>
+      <div class="cols-config-container">
+        <div class="cols-list" style="display:flex;gap:3px;flex-wrap:wrap;"></div>
+        <button class="btn-sm-add" onclick="addColumnToRoom(this)">+ Col</button>
+      </div>
+    </td>
+    <td style="text-align:center;">
+      <button class="btn-remove" onclick="removeRowAndSave(this)">✕</button>
+    </td>
+  `;
+  r.appendChild(l);
+  const s = l.querySelector(".cols-list");
+  n.forEach((t, e) => {
+    createColumnBadge(s, e + 1, t);
+  });
+  o && saveToLocalStorage();
+}
+
+function createColumnBadge(t, e, n) {
+  const o = document.createElement("div");
+  o.className = "col-bench-unit";
+  o.innerHTML = `
+    <span>C<span class="col-idx">${e}</span>:</span>
+    <input type="number" class="col-benches" value="${n}" min="1" oninput="saveToLocalStorage()">
+    <span style="cursor:pointer;color:#ef4444;font-weight:bold;margin-left:2px;" onclick="removeColumnFromRoom(this)">✕</span>
+  `;
+  t.appendChild(o);
+}
+
+function addColumnToRoom(t) {
+  const e = t.previousElementSibling;
+  createColumnBadge(e, e.children.length + 1, 7);
+  saveToLocalStorage();
+}
+
+function removeColumnFromRoom(t) {
+  const e = t.closest(".cols-list");
+  t.closest(".col-bench-unit").remove();
+  Array.from(e.children).forEach((t, e) => {
+    t.querySelector(".col-idx").innerText = e + 1;
+  });
+  saveToLocalStorage();
+}
+
+function removeRowAndSave(t) {
+  t.closest("tr").remove();
+  saveToLocalStorage();
+}
+
+function parseStudentData(t, e = "") {
+  const n = t.split("\n"), o = [];
+  n.forEach(t => {
+    const n = t.trim().split(/\s+/);
+    if (n.length >= 4 && /^\d+$/.test(n[0]) && /^\d{10}$/.test(n[1])) {
+      o.push({ slNo: n[0], ht: n[1], sc: n[2], pc: n[2], med: n.slice(3).join(" ").toUpperCase(), stream: e });
+    } else if (n.length >= 3) {
+      let t = n.findIndex(t => /^\d{10}$/.test(t));
+      if (-1 !== t) {
+        let a = t > 0 && /^\d+$/.test(n[t - 1]) ? n[t - 1] : (o.length + 1).toString(),
+            r = n[t],
+            i = n[t + 1] || "02",
+            l = n.slice(t + 2).join(" ") || "E";
+        o.push({ slNo: a, ht: r, sc: i, pc: i, med: l.toUpperCase(), stream: e });
+      }
+    }
+  });
+  o.sort((t, e) => parseInt(t.slNo) - parseInt(e.slNo));
+  return o;
+}
+
+function formatDateFormatted(t) {
+  if (!t) return "";
+  const e = new Date(t);
+  return `${String(e.getDate()).padStart(2, "0")}/${String(e.getMonth() + 1).padStart(2, "0")}/${e.getFullYear()}`;
+}
+
+function generateSeatingAndAttendance() {
+  saveToLocalStorage();
+  const t = document.querySelectorAll("#roomTableBody tr"), e = [];
+  let n = 0;
+
+  t.forEach((t, o) => {
+    const a = t.querySelector(".rm-name").value.trim() || `ROOM NO ${o + 1}`,
+          r = t.querySelector(".rm-type").value,
+          i = parseInt(t.querySelector(".rm-strength").value) || 0,
+          l = t.querySelectorAll(".col-benches"),
+          d = [];
+
+    l.forEach(t => {
+      const e = parseInt(t.value) || 0;
+      e > 0 && d.push(e);
+    });
+
+    if (d.length > 0) {
+      const t = d.reduce((t, e) => t + e, 0),
+            o = 2 * t,
+            l = i > 0 ? Math.min(i, o) : o;
+      e.push({ name: a, type: r, columns: d, totalBenches: t, physicalCapacity: o, maxStrength: l });
+      n += l;
+    }
+  });
+
+  if (0 === e.length) return void alert("Please add at least one valid room with columns.");
+
+  const o = document.getElementById("courseTypeSelect").value,
+        a = getSelectedCourseType();
+  let r = [], i = [], l = [];
+  "General & Vocational" === o ? (r = parseStudentData(document.getElementById("studentGeneralRawData").value, "General"), i = parseStudentData(document.getElementById("studentVocationalRawData").value, "Vocational")) : l = parseStudentData(document.getElementById("studentRawData").value, a);
+
+  const d = r.length + i.length + l.length;
+  if (0 === d) return void alert("Please paste or upload valid student data.");
+
+  const s = document.getElementById("examInputText").value.trim() || "INTERMEDIATE PUBLIC EXAMINATION",
+        c = document.getElementById("centreNameInput").value.trim() || "GOVT. JUNIOR COLLEGE,____",
+        m = document.getElementById("districtInput").value.trim(),
+        p = document.getElementById("centreNoInput").value.trim() || "44015",
+        u = a,
+        g = formatDateFormatted(document.getElementById("examDate").value),
+        h = document.getElementById("examSession").value,
+        f = c + (m ? `, ${m}` : "");
+
+  document.getElementById("infoBar").innerHTML = `
+    <div class="info-card">Exam: ${s}</div>
+    <div class="info-card">Centre: ${f} (C.NO: ${p})</div>
+    <div class="info-card">Date: ${g} ${h}</div>
+    <div class="info-card">Total Students: ${d}</div>
+    <div class="info-card">Total Allowed Strength: ${n} Seats</div>
+  `;
+
+  const y = document.getElementById("roomsOutputContainer"),
+        v = document.getElementById("attendanceSheetsContainer");
+  y.innerHTML = "";
+  v.innerHTML = "";
+
+  const w = [], x = [], E = [], S = [],
+        A = new Set, I = new Set, N = new Set, T = new Set, $ = new Set;
+  let C = 1;
+
+  e.forEach(t => {
+    const e = document.createElement("div");
+    e.className = "room-block";
+    const n = "General" === t.type ? "GEN" : "Vocational" === t.type ? "VOC" : "MIX",
+          a = `ROOM ${C} (${n})`;
+    C++;
+    const d = "Any" !== t.type ? ` - ${t.type}` : "";
+    e.innerHTML = `
+      <div class="room-title">${t.name}${d} <span style="font-size:0.85rem;color:#64748b;">(Cap: ${t.maxStrength})</span></div>
+      <div class="room-sub-header">${s} | ${f} (C.NO: ${p})</div>
+      <div class="room-sub-header">Stream: ${u} | Date: ${g} | Session: ${h}</div>
+      <div class="blackboard">BLACKBOARD / FRONT</div>
+    `;
+
+    const m = document.createElement("div");
+    m.className = "classroom-grid";
+    let y = [], v = [];
+
+    t.columns.forEach((t, e) => {
+      const n = e + 1,
+            o = document.createElement("div");
+      o.className = "column";
+      const a = document.createElement("div");
+      a.className = "column-header";
+      a.innerText = `Col ${n} (L⬇️ R⬆️)`;
+      o.appendChild(a);
+      let r = [], i = [];
+      for (let e = 1; e <= t; e++) {
+        const t = document.createElement("div");
+        t.className = "bench";
+        const a = document.createElement("div");
+        a.className = "bench-number";
+        a.innerText = `C${n}-B${e}`;
+        t.appendChild(a);
+        const l = document.createElement("div");
+        l.className = "seats-container";
+        const d = document.createElement("div");
+        d.className = "seat";
+        const s = document.createElement("div");
+        s.className = "seat";
+        l.appendChild(d);
+        l.appendChild(s);
+        t.appendChild(l);
+        o.appendChild(t);
+        r.push(d);
+        i.push(s);
+      }
+      i.reverse();
+      y.push(o);
+      v.push([...r, ...i]);
+    });
+
+    const B = {}, k = {}, D = {}, M = [];
+    let O = 0;
+
+    v.forEach(e => {
+      e.forEach(e => {
+        let n = null;
+        if (O < t.maxStrength) {
+          if ("General & Vocational" === o) {
+            "General" === t.type && r.length > 0 ? n = r.shift() : "Vocational" === t.type && i.length > 0 ? n = i.shift() : "Any" === t.type && (r.length > 0 ? n = r.shift() : i.length > 0 && (n = i.shift()));
+          } else {
+            l.length > 0 && (n = l.shift());
+          }
+          if (n) O++;
+        }
+
+        if (n) {
+          M.push(n);
+          const t = `(${n.pc} ${n.med})`;
+          e.innerHTML = `
+            <span class="seat-ht">${n.ht}</span>
+            <span class="seat-meta">${t}</span>
+          `;
+          if ("General" === n.stream) {
+            const t = `${n.sc}_${n.pc}_${n.med}`;
+            B[t] = (B[t] || 0) + 1;
+            A.add(n.med);
+            I.add(JSON.stringify({ sc: n.sc, pc: n.pc }));
+          } else if ("Vocational" === n.stream) {
+            const t = n.med;
+            k[t] = (k[t] || 0) + 1;
+            N.add(n.med);
+          } else {
+            const t = `${n.sc}_${n.pc}_${n.med}`;
+            D[t] = (D[t] || 0) + 1;
+            T.add(n.med);
+            $.add(JSON.stringify({ sc: n.sc, pc: n.pc }));
+          }
+        } else {
+          e.innerHTML = '<span class="seat-ht" style="color:#94a3b8; font-size: 0.85rem;">EMPTY</span><span class="seat-meta">-</span>';
+          e.classList.add("empty");
+        }
+      });
+    });
+
+    y.forEach(t => m.appendChild(t));
+    e.appendChild(m);
+    document.getElementById("roomsOutputContainer").appendChild(e);
+
+    generateAttendanceSheet(t.name, M, s, f, p, g, h);
+
+    const R = t.name + ("Any" !== t.type ? ` (${t.type})` : ""),
+          P = M.map(t => t.ht);
+    S.push({ stream: n, roomLabel: a, halltickets: P, strength: M.length });
+
+    "General & Vocational" === o ? ("General" !== t.type && "Any" !== t.type || w.push({ roomName: R, counts: B }), "Vocational" !== t.type && "Any" !== t.type || x.push({ roomName: R, counts: k })) : E.push({ roomName: R, counts: D });
+  });
+
+  const B = document.getElementById("paperSummaryOutput");
+  B.innerHTML = "";
+  const k = t => Array.from(t).map(t => JSON.parse(t)).sort((t, e) => t.sc.localeCompare(e.sc) || t.pc.localeCompare(e.pc));
+  let D = "";
+
+  "General & Vocational" === o ? (w.length > 0 && (D += buildGeneralSummaryHTML("General Course", w, k(I), Array.from(A).sort())), x.length > 0 && (D += buildVocationalSummaryHTML("Vocational Course", x, Array.from(N).sort()))) : D += buildGeneralSummaryHTML(u + " Course", E, k($), Array.from(T).sort());
+
+  let M = "";
+  const O = S.filter(t => "GEN" === t.stream),
+        R = S.filter(t => "VOC" === t.stream),
+        P = S.filter(t => "GEN" !== t.stream && "VOC" !== t.stream);
+
+  O.length && (M += buildSeatingStrengthNoticeBoardHTML(O, s + " - GENERAL", f, p, g, h));
+  R.length && (M += buildSeatingStrengthNoticeBoardHTML(R, s + " - VOCATIONAL", f, p, g, h));
+  O.length || R.length || !P.length || (M = buildSeatingStrengthNoticeBoardHTML(P, s, f, p, g, h));
+
+  B.innerHTML = `
+    <div style="display:flex;flex-direction:column;gap:20px;width:100%;">
+      ${D}
+      ${M}
+    </div>
+  `;
+
+  const L = document.getElementById("layoutArea");
+  L.style.display = "block";
+  L.scrollIntoView({ behavior: "smooth" });
+}
+
+function buildSeatingStrengthNoticeBoardHTML(t, e, n, o, a, r) {
+  let i = 0, l = "";
+  t.forEach(t => {
+    i += t.strength;
+    let e = [], n = [], o = [];
+    t.halltickets.forEach((t, a) => {
+      a % 3 == 0 ? e.push(t) : a % 3 == 1 ? n.push(t) : o.push(t);
+    });
+    const a = `
+      <div style="display:flex;gap:16px;text-align:left;padding:6px;">
+        <div style="flex:1;font-size:1.15rem;font-weight:800;line-height:1.7;word-break:break-all;letter-spacing:0.4px;color:#000;">${e.join("<br>")}</div>
+        <div style="flex:1;font-size:1.15rem;font-weight:800;line-height:1.7;word-break:break-all;letter-spacing:0.4px;color:#000;">${n.join("<br>")}</div>
+        <div style="flex:1;font-size:1.15rem;font-weight:800;line-height:1.7;word-break:break-all;letter-spacing:0.4px;color:#000;">${o.join("<br>")}</div>
+      </div>
+    `;
+    l += `
+      <tr>
+        <td style="width:1%;white-space:nowrap;font-weight:900;font-size:0.85rem;text-transform:uppercase;line-height:1.25;padding:8px 6px;text-align:center;color:#000;">
+          ${t.roomLabel.split(" ")[0]} ${t.roomLabel.split(" ")[1]}<br><span style="font-size:0.68rem;font-weight:700;color:#334155;">(${t.stream})</span>
+        </td>
+        <td style="width:98%;padding:10px 14px;">${a}</td>
+        <td style="width:1%;white-space:nowrap;font-weight:900;font-size:1.3rem;text-align:center;padding:8px 10px;color:#000;">${t.strength}</td>
+      </tr>
+    `;
+  });
+
+  return `
+    <div class="seating-strength-notice" data-stream="${1 === t.length ? t[0].stream : t.some(t => "GEN" === t.stream) && !t.some(t => "VOC" === t.stream) ? "GEN" : t.some(t => "VOC" === t.stream) && !t.some(t => "GEN" === t.stream) ? "VOC" : "MIX"}">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;" class="no-print">
+        <div style="font-weight:bold;font-size:0.9rem;color:#000;">📋 ROOM WISE SEATING STRENGTH NOTICE BOARD</div>
+        <button class="btn-print-att" onclick="printSingleElement(this.closest('.seating-strength-notice'), 'Seating Strength Notice Board')">🖨️ Print Notice Board PDF</button>
+      </div>
+      <div class="notice-board-header">
+        <h2 class="notice-board-title">${e}</h2>
+        <div class="notice-board-sub">Centre: ${n} (C.NO: ${o}) | Date: ${a} (${r})</div>
+      </div>
+      <div class="summary-table-container">
+        <table class="exact-notice-table" style="table-layout:auto;width:100%;">
+          <thead>
+            <tr>
+              <th style="width:1%;white-space:nowrap;font-size:0.65rem;padding:6px 6px;color:#000;">ROOM</th>
+              <th style="width:98%;font-size:1.05rem;padding:8px 10px;color:#000;">ALLOTTED HALLTICKET NUMBERS</th>
+              <th style="width:1%;white-space:nowrap;font-size:0.65rem;padding:6px 6px;color:#000;">TOTAL</th>
+            </tr>
+          </thead>
+          <tbody>${l}</tbody>
+          <tfoot>
+            <tr style="background-color:#f1f5f9;font-weight:900;color:#000;">
+              <td colspan="2" style="text-align:right;padding-right:20px;font-size:1.05rem;padding:10px 14px;">TOTAL CANDIDATES ALLOTTED:</td>
+              <td style="font-size:1.35rem;white-space:nowrap;padding:10px 14px;text-align:center;">${i}</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  `;
+}
+
+function printSeatingPlan() {
+  const t = document.getElementById("roomsOutputContainer");
+  t && t.innerHTML.trim() ? printOutputElement(t, "Seating Plan", `
+    .room-block { background:#fff; border:1px solid #000; padding:10px; margin:0 0 12px 0; page-break-after:always; page-break-inside:avoid; box-sizing:border-box; width:100%; }
+    .room-block:last-child { page-break-after:auto; }
+    .room-title { text-align:center; font-size:1.25rem; font-weight:800; margin:0 0 4px; }
+    .room-sub-header { text-align:center; font-size:.82rem; font-weight:600; margin-bottom:8px; }
+    .blackboard { background:#000 !important; color:#fff !important; text-align:center; padding:6px; margin:0 auto 12px; border-radius:3px; font-weight:700; width:50%; font-size:.82rem; text-transform:uppercase; }
+    .classroom-grid { display:flex; gap:12px; justify-content:space-evenly; align-items:flex-start; width:100%; box-sizing:border-box; }
+    .column { display:flex; flex-direction:column; gap:8px; align-items:center; flex:1 1 0; min-width:0; }
+    .column-header { font-weight:700; padding:5px 10px; border:1px solid #000; text-align:center; width:90%; }
+    .bench { background:#fff; border:1px solid #000; padding:6px; display:flex; flex-direction:column; align-items:center; width:100%; box-sizing:border-box; }
+    .bench-number { font-size:.7rem; font-weight:700; margin-bottom:5px; }
+    .seats-container { display:flex; gap:7px; width:100%; justify-content:space-between; }
+    .seat { color:#000; background:#fff; border:1px solid #000; padding:7px 5px; width:50%; text-align:center; box-sizing:border-box; min-height:48px; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+    .seat-ht { font-size:1rem; font-weight:800; }
+    .seat-meta { font-size:.68rem; font-weight:700; margin-top:2px; }
+    .seat.empty { background:#eee; }
+  `) : alert("Please generate the seating plan first.");
+}
+
+function printPaperSummary() {
+  const t = document.getElementById("paperSummaryOutput");
+  if (!t || !t.innerHTML.trim()) return void alert("Please generate the paper summary first.");
+  const e = t.cloneNode(!0);
+  if (e.querySelectorAll(".seating-strength-notice").forEach(t => t.remove()), !e.innerHTML.trim()) return void alert("No paper summary is available to print.");
+  const n = (t, e = "") => {
+    const n = document.getElementById(t);
+    return n ? (n.value || n.textContent || "").trim() : e;
+  },
+  o = n("centreNameInput", "GOVT. JUNIOR COLLEGE,___"),
+  a = n("centreNoInput", ""),
+  r = n("districtInput", ""),
+  i = n("examDate", ""),
+  l = n("examSession", "");
+  let d = i;
+  if ("function" == typeof formatDateFormatted && i) try { d = formatDateFormatted(i); } catch (t) {}
+  const s = document.createElement("div");
+  s.className = "paper-summary-centre-header";
+  s.innerHTML = `
+    <div class="paper-summary-centre-left">
+      <div class="paper-summary-college">${o}</div>
+      <div>Centre Code: ${a}</div>
+      <div>District: ${r}</div>
+    </div>
+    <div class="paper-summary-centre-right">
+      <div>Date: ${d}</div>
+      <div>Session: ${l}</div>
+    </div>
+  `;
+  const c = document.createElement("div");
+  for (c.appendChild(s); e.firstChild;) c.appendChild(e.firstChild);
+  printOutputElement(c, "Paper Summary", `
+    .paper-summary-centre-header { width:100%; box-sizing:border-box; display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:center; background:#fff !important; color:#000 !important; border:3px solid #000 !important; border-bottom:0 !important; padding:8px 10px; font-weight:900; }
+    .paper-summary-centre-left { text-align:left; font-size:1rem; line-height:1.35; }
+    .paper-summary-centre-right { text-align:right; font-size:1rem; line-height:1.35; }
+    .paper-summary-college { font-size:1.35rem; line-height:1.2; font-weight:900; text-transform:uppercase; margin-bottom:3px; }
+    .summary-table-container { border:1px solid #000 !important; overflow:hidden; background:#fff !important; color:#000 !important; margin-bottom:12px; page-break-inside:avoid; }
+    .summary-title { font-size:.95rem; font-weight:900; text-align:center; margin:8px 0; text-transform:uppercase; color:#000 !important; background:#fff !important; }
+    .summary-table { width:100%; border-collapse:collapse; font-size:.78rem; text-align:center; color:#000 !important; background:#fff !important; }
+    .summary-table th, .summary-table td { padding:5px 4px; border:1px solid #000 !important; color:#000 !important; background:#fff !important; font-weight:800; }
+    .summary-table th { font-weight:900 !important; }
+    p { text-align:center; color:#000 !important; }
+  `);
+}
+
+function printNoticeBoard(t) {
+  const e = Array.from(document.querySelectorAll("#paperSummaryOutput .seating-strength-notice"));
+  if (0 === e.length) return void alert("Please generate the notice board first.");
+  let n, o;
+  "GEN" === t ? (n = e.find(t => "GEN" === t.dataset.stream), o = "General Notice Board") : "VOC" === t ? (n = e.find(t => "VOC" === t.dataset.stream), o = "Vocational Notice Board") : (n = e[0], o = "Notice Board");
+  n ? printOutputElement(n, o, `
+    body { background:#fff !important; color:#000 !important; }
+    .seating-strength-notice { background:#fff !important; color:#000 !important; border:3px solid #000 !important; box-shadow:none !important; border-radius:0 !important; padding:6px; min-height:98vh; }
+    .notice-board-header { text-align:center !important; margin-bottom:10px !important; border-bottom:4px solid #000 !important; padding:7px 5px 9px !important; background:#fff !important; }
+    .notice-board-title { font-size:1.75rem !important; line-height:1.15 !important; font-weight:900 !important; text-transform:uppercase !important; margin:0 0 7px !important; }
+    .notice-board-sub { font-size:1.25rem !important; line-height:1.35 !important; font-weight:900 !important; margin:3px 0 !important; }
+    .exact-notice-table { background:#fff !important; color:#000 !important; border-collapse:collapse !important; width:100%; text-align:center; }
+    .exact-notice-table th, .exact-notice-table td { border:2px solid #000 !important; padding:5px 6px; }
+    .exact-notice-table th { font-size:.88rem !important; font-weight:900 !important; text-transform:uppercase; }
+    .exact-notice-table td { font-size:.84rem !important; font-weight:800 !important; }
+  `) : alert(("GEN" === t ? "General" : "Vocational") + " notice board is not available.");
+}
+
+function printOutputElement(t, e, n = "") {
+  const o = window.open("", "_blank", "width=1000,height=800");
+  if (!o) return void alert("Please allow pop-ups for this site to print.");
+  o.document.open();
+  o.document.write(`
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>${e}</title>
+      <style>
+        @page { size:A4 portrait; margin:6mm; }
+        * { box-sizing:border-box; }
+        body { font-family:Arial,sans-serif; padding:0; margin:0; color:#000; background:#fff; }
+        button, .no-print { display:none !important; }
+        ${n}
+      </style>
+    </head>
+    <body>
+      ${t.outerHTML}
+      <script>
+        window.onload = function() {
+          setTimeout(function() {
+            window.focus();
+            window.print();
+            window.close();
+          }, 200);
+        };
+      <\/script>
+    </body>
+    </html>
+  `);
+  o.document.close();
+}
+
+function printSingleElement(t, e) {
+  const n = window.open("", "_blank", "width=900,height=700");
+  if (!n) return void alert("Please allow pop-ups for this site to print.");
+  n.document.open();
+  n.document.write(`
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>${e}</title>
+      <style>
+        @page { size:A4 portrait; margin:4mm; }
+        body { font-family:Arial,sans-serif; color:#000; padding:0; margin:0; }
+        .seating-strength-notice { border:2px solid #000; padding:6px; box-sizing:border-box; height:98vh; display:flex; flex-direction:column; justify-content:space-between; color:#000; }
+        .summary-table-container { border:1px solid #000; border-radius:4px; overflow:hidden; flex-grow:1; }
+        .exact-notice-table { width:100%; border-collapse:collapse; text-align:center; }
+        .exact-notice-table th, .exact-notice-table td { border:2px solid #000; padding:4px 6px; }
+        .exact-notice-table th { background-color:#fff !important; font-weight:900; font-size:0.72rem; }
+        .notice-board-header { text-align:center; margin-bottom:4px; border-bottom:2px solid #000; }
+        .notice-board-title { font-size:0.9rem; font-weight:900; }
+        button, .no-print { display:none !important; }
+      </style>
+    </head>
+    <body>
+      ${t.outerHTML}
+      <script>
+        window.onload = function() {
+          setTimeout(function() {
+            window.focus();
+            window.print();
+            window.close();
+          }, 200);
+        };
+      <\/script>
+    </body>
+    </html>
+  `);
+  n.document.close();
+}
+
+function generateAttendanceSheet(t, e, n, o, a, r, i) {
+  const l = document.getElementById("attendanceSheetsContainer"),
+        d = e.length,
+        s = Math.ceil(d / 26) || 1,
+        c = document.createElement("div");
+  c.className = "room-attendance-group";
+
+  for (let l = 1; l <= s; l++) {
+    const m = document.createElement("div");
+    m.className = "attendance-sheet";
+    const p = 26 * (l - 1),
+          u = e.slice(p, p + 26);
+    let g = "";
+
+    for (let t = 0; t < 26; t++) {
+      const e = u[t];
+      g += `
+        <tr>
+          <td style="width:8%;font-weight:bold;">${e ? p + t + 1 : ""}</td>
+          <td style="width:35%;" class="ht-cell">${e ? e.ht : ""}</td>
+          <td style="width:25%;"></td>
+          <td style="width:32%;"></td>
+        </tr>
+      `;
+    }
+
+    const h = s > 1 ? ` (Page ${l} of ${s})` : "";
+    m.innerHTML = `
+      <div class="no-print" style="text-align:right;margin-bottom:6px;">
+        <button class="btn-print-att" onclick="printSingleSheet(this)">🖨️ Print Attendance Sheet (${t}${h})</button>
+      </div>
+      <table class="att-table-header">
+        <tr><td colspan="2" class="att-main-title">${n}</td></tr>
+        <tr><td colspan="2" class="att-center-title">Name of the Centre: ${o}</td></tr>
+        <tr><td style="width:60%;">Date of Examination : ${r} ${i}</td><td style="width:40%;">C.NO : ${a}</td></tr>
+        <tr><td style="width:60%;">Subject and Paper :</td><td style="width:40%;font-size:0.95rem;font-weight:bold;text-align:center;">${t} (Total: ${d})${h}</td></tr>
+        <tr><td colspan="2">Name of the Invigilator (s) :</td></tr>
+      </table>
+      <div class="att-table-wrapper">
+        <table class="att-table-body">
+          <thead>
+            <tr>
+              <th style="width:8%;">Sl.No</th>
+              <th style="width:35%;">Regd. No. of Candidates</th>
+              <th style="width:25%;">Sl.No.of the Main Answer Book</th>
+              <th style="width:32%;">Sign.of the Candidates</th>
+            </tr>
+          </thead>
+          <tbody>${g}</tbody>
+          <tfoot>
+            <tr><td colspan="2" style="text-align:right;font-weight:bold;height:26px;">PRESENT</td><td></td><td rowspan="3" style="vertical-align:bottom;font-weight:bold;text-align:center;padding-bottom:4px;">Sign.of Invigilator</td></tr>
+            <tr><td colspan="2" style="text-align:right;font-weight:bold;height:26px;">ABSENT</td><td></td></tr>
+            <tr><td colspan="2" style="text-align:right;font-weight:bold;height:26px;">TOTAL</td><td></td></tr>
+          </tfoot>
+        </table>
+      </div>
+    `;
+    c.appendChild(m);
+  }
+  l.appendChild(c);
+}
+
+function printSingleSheet(t) {
+  const e = t.closest(".attendance-sheet"),
+        n = window.open("", "_blank", "width=950,height=750");
+  if (!n) return void alert("Please allow pop-ups in your browser to print attendance sheets.");
+  n.document.open();
+  n.document.write(`
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Attendance Sheet Print</title>
+      <style>
+        @page { size:A4 portrait; margin:6mm; }
+        * { box-sizing:border-box; }
+        body { font-family:Arial,sans-serif; padding:0; margin:0; color:#000; background:#fff; }
+        .attendance-sheet { border:2px solid #000; padding:8px; box-sizing:border-box; height:98vh; display:flex; flex-direction:column; justify-content:space-between; page-break-after:always; page-break-inside:avoid; }
+        .att-table-header { width:100%; border-collapse:collapse; margin-bottom:-1px; font-size:0.8rem; }
+        .att-table-header td { border:1px solid #000; padding:4px 6px; font-weight:bold; }
+        .att-main-title { text-align:center; font-size:0.95rem; font-weight:800; text-transform:uppercase; }
+        .att-center-title { text-align:center; font-size:0.88rem; font-weight:bold; text-transform:uppercase; }
+        .att-table-wrapper { flex-grow:1; display:flex; flex-direction:column; }
+        .att-table-body { width:100%; height:100%; border-collapse:collapse; }
+        .att-table-body th, .att-table-body td { border:1px solid #000; padding:2px 4px; text-align:center; }
+        .att-table-body th { font-size:0.78rem; font-weight:bold; background-color:#f1f5f9; height:24px; }
+        .att-table-body td { font-size:0.82rem; vertical-align:middle; }
+        .att-table-body td.ht-cell { font-weight:bold; font-size:1.15rem; letter-spacing:1px; }
+        button, .no-print { display:none !important; }
+      </style>
+    </head>
+    <body>
+      ${e.outerHTML}
+      <script>
+        window.onload = function() {
+          setTimeout(function() {
+            window.focus();
+            window.print();
+            window.close();
+          }, 200);
+        };
+      <\/script>
+    </body>
+    </html>
+  `);
+  n.document.close();
+}
+
+function printAllAttendanceSheets() {
+  const t = document.querySelectorAll(".attendance-sheet");
+  if (!t || 0 === t.length) return void alert("Please generate seating and attendance plan first.");
+  const n = window.open("", "_blank", "width=950,height=750");
+  if (!n) return void alert("Please allow pop-ups in your browser to print attendance sheets.");
+  let e = "";
+  t.forEach(t => {
+    e += t.outerHTML;
+  });
+  n.document.open();
+  n.document.write(`
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>All Attendance Sheets Print</title>
+      <style>
+        @page { size:A4 portrait; margin:6mm; }
+        * { box-sizing:border-box; }
+        body { font-family:Arial,sans-serif; padding:0; margin:0; color:#000; background:#fff; }
+        .attendance-sheet { border:2px solid #000; padding:8px; margin-bottom:0; box-sizing:border-box; height:98vh; display:flex; flex-direction:column; justify-content:space-between; page-break-after:always; page-break-inside:avoid; }
+        .attendance-sheet:last-child { page-break-after:auto; }
+        .att-table-header { width:100%; border-collapse:collapse; margin-bottom:-1px; font-size:0.8rem; }
+        .att-table-header td { border:1px solid #000; padding:4px 6px; font-weight:bold; }
+        .att-main-title { text-align:center; font-size:0.95rem; font-weight:800; text-transform:uppercase; }
+        .att-center-title { text-align:center; font-size:0.88rem; font-weight:bold; text-transform:uppercase; }
+        .att-table-wrapper { flex-grow:1; display:flex; flex-direction:column; }
+        .att-table-body { width:100%; height:100%; border-collapse:collapse; }
+        .att-table-body th, .att-table-body td { border:1px solid #000; padding:2px 4px; text-align:center; }
+        .att-table-body th { font-size:0.78rem; font-weight:bold; background-color:#f1f5f9; height:24px; }
+        .att-table-body td { font-size:0.82rem; vertical-align:middle; }
+        .att-table-body td.ht-cell { font-weight:bold; font-size:1.15rem; letter-spacing:1px; }
+        button, .no-print { display:none !important; }
+      </style>
+    </head>
+    <body>
+      ${e}
+      <script>
+        window.onload = function() {
+          setTimeout(function() {
+            window.focus();
+            window.print();
+            window.close();
+          }, 250);
+        };
+      <\/script>
+    </body>
+    </html>
+  `);
+  n.document.close();
+}
+
+function buildGeneralSummaryHTML(t, e, n, o) {
+  if (0 === n.length) return `<div class="summary-table-container"><div class="summary-title">📊 Room-Wise Question Paper Summary Statement (${t})</div><p style="text-align:center;padding:10px;color:#64748b;">No students allotted for this stream.</p></div>`;
+  const a = n.length * o.length;
+  let r = '<tr><th rowspan="2">Room Name</th>', i = "<tr>";
+  n.forEach(t => {
+    r += `<th colspan="${o.length}">Paper Code: ${t.pc}</th>`;
+    o.forEach(t => {
+      i += `<th>Med (${t})</th>`;
+    });
+  });
+  r += '<th rowspan="2">Total</th></tr>';
+  i += "</tr>";
+  let l = "", d = 0;
+  const s = {};
+
+  function c() {
+    let t = "";
+    for (let e = 0; e < a; e++) t += "<td></td>";
+    return t += "<td></td>", t;
+  }
+
+  e.forEach(t => {
+    let e = 0, a = `<tr><td><strong>${t.roomName}</strong></td>`;
+    n.forEach(n => {
+      o.forEach(o => {
+        const r = `${n.sc}_${n.pc}_${o}`,
+              i = t.counts[r] || 0;
+        e += i;
+        s[r] = (s[r] || 0) + i;
+        a += `<td>${i > 0 ? i : "-"}</td>`;
+      });
+    });
+    d += e;
+    a += `<td><strong>${e}</strong></td></tr>`;
+    l += a;
+  });
+
+  let m = '<tr style="background-color:var(--bench-bg);"><td><strong>TOTAL PAPERS</strong></td>';
+  n.forEach(t => {
+    o.forEach(e => {
+      const n = `${t.sc}_${t.pc}_${e}`,
+            o = s[n] || 0;
+      m += `<td><strong>${o}</strong></td>`;
+    });
+  });
+  m += `<td><strong>${d}</strong></td></tr>`;
+
+  const p = document.getElementById("examSession").value.includes("FN") ? "8.45 AM" : "1.45 PM";
+  let u = `
+    ${m}
+    <tr><td><strong>${p}</strong></td>${c()}</tr>
+    <tr><td><strong>ABSENT</strong></td>${c()}</tr>
+    <tr><td><strong>PRESENT</strong></td>${c()}</tr>
+    <tr><td><strong>TOTAL PAPERS</strong></td>${c()}</tr>
+  `;
+
+  return `
+    <div class="summary-table-container">
+      <div class="summary-title">📊 Paper Summary (${t})</div>
+      <table class="summary-table">
+        <thead>${r}${i}</thead>
+        <tbody>${l}</tbody>
+        <tfoot>${u}</tfoot>
+      </table>
+    </div>
+  `;
+}
+
+function buildVocationalSummaryHTML(t, e, n) {
+  if (0 === n.length) return `<div class="summary-table-container"><div class="summary-title">📊 Room-Wise Course Code Summary Statement (${t})</div><p style="text-align:center;padding:10px;color:#64748b;">No students allotted for this stream.</p></div>`;
+  const o = n.length;
+  let a = "<tr><th>Room Name</th>";
+  n.forEach(t => {
+    a += `<th>Paper Code (${t})</th>`;
+  });
+  a += "<th>Total</th></tr>";
+  let r = "", i = 0;
+  const l = {};
+
+  function d() {
+    let t = "";
+    for (let e = 0; e < o; e++) t += "<td></td>";
+    return t += "<td></td>", t;
+  }
+
+  e.forEach(t => {
+    let e = 0, o = `<tr><td><strong>${t.roomName}</strong></td>`;
+    n.forEach(n => {
+      const a = t.counts[n] || 0;
+      e += a;
+      l[n] = (l[n] || 0) + a;
+      o += `<td>${a > 0 ? a : "-"}</td>`;
+    });
+    i += e;
+    o += `<td><strong>${e}</strong></td></tr>`;
+    r += o;
+  });
+
+  let s = '<tr style="background-color:var(--bench-bg);"><td><strong>TOTAL STUDENTS</strong></td>';
+  n.forEach(t => {
+    const e = l[t] || 0;
+    s += `<td><strong>${e}</strong></td>`;
+  });
+  s += `<td><strong>${i}</strong></td></tr>`;
+
+  const c = document.getElementById("examSession").value.includes("FN") ? "8.45 AM" : "1.45 PM";
+  let m = `
+    ${s}
+    <tr><td><strong>${c}</strong></td>${d()}</tr>
+    <tr><td><strong>ABSENT</strong></td>${d()}</tr>
+    <tr><td><strong>PRESENT</strong></td>${d()}</tr>
+    <tr><td><strong>TOTAL PAPERS</strong></td>${d()}</tr>
+  `;
+
+  return `
+    <div class="summary-table-container">
+      <div class="summary-title">📊 Vocational Medium Code Summary (${t})</div>
+      <table class="summary-table">
+        <thead>${a}</thead>
+        <tbody>${r}</tbody>
+        <tfoot>${m}</tfoot>
+      </table>
+    </div>
+  `;
+}
+
+window.onload = function() {
+  loadSavedTheme();
+  const t = (new Date).toISOString().split("T")[0];
+  document.getElementById("examDate").value = t;
+  loadFromLocalStorage() || loadDefaultData();
+};
+</script>
+</body>
+</html>
